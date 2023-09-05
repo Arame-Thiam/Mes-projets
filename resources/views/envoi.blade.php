@@ -12,19 +12,9 @@
         @section('content')
         <main>
             <section class=" section section-loading">
-                <h1 id='titre'>En un click seulement</br>effectuer votre reservation de billiet</h1>
+                <h1 id='titre'>En un click seulement</br>effectuer votre demande d'envoi de colis</h1>
                     <div class='form'>
                         <form action="">
-                            <div class='item-ir'>
-                            <div class='litte'>
-                                <input type="radio" />
-                                <label class="lab">Aller</label>
-                            </div>
-                            <div class='litte'>
-                                <input type="radio" />
-                                <label class="lab">Aller et Retour</label>
-                            </div>
-                            </div>
                             <div class='item-er'>
                             <div class="long">
                                 <label htmlFor="">Depart</label>
@@ -62,10 +52,6 @@
                                 <label htmlFor="">Date depart</label>
                                 <input type="date" class='nana' />
                             </div>
-                            <div class="long">
-                                <label htmlFor="">Nombre de passager</label>
-                                <input type="number" class='nana' placeholder='nombre de passager' />
-                            </div>
                             <div class="style">
                                 <a href="" class='btn'>Confirm</a>
                             </div>
@@ -81,24 +67,24 @@
 
     		<section class="section section-second">
     			<div class="container">
-    				<h3 class="title1">Nos services clientel</h3>
+    				<h3 class="title1">Nous faisons</h3>
 
                         <div class='clientele'>
                             <div class='react react-one'>
-                                <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Resservation de billets de bus</h3>
+                                <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
+                                <h3 class='fonction'>Envoi de documents</h3>
                             </div>
                                 <div class='react react-one'>
-                                <img src="{{asset('scss/route 2.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Demande location de bus et mini-bus</h3>
+                                <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
+                                <h3 class='fonction'>Envoi de marchandises</h3>
                             </div>
                             <div class='react react-one'>
                                 <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Demande d'envoi de colis</h3>
+                                <h3 class='fonction'>Envoi de materiel de construction</h3>
                             </div>
                             <div class='react react-one'>
-                                <img src="{{asset('scss/route 4.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Autre type de fonctionalite</h3>
+                                <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
+                                <h3 class='fonction'>Envoi de cultures</h3>
                             </div>
                         </div>
     			</div>
@@ -106,7 +92,7 @@
 
     		<section class="section section-white">
     			<div class="container">
-    				<h3 class="section-title2">Ce qu'ils pensent de nous</h3>
+    				<h3 class="section-title2">Ce qu'ils disesnt de nous</h3>
 
                         
     			</div>

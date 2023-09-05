@@ -65,6 +65,15 @@ body{
     border-radius: 8px;
     border-left: 5px solid maroon;
   }
+  .item-input1 {
+    padding: 16px;
+    width: 100%;
+    margin: auto;
+    background: #dedede;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    border-left: 5px solid maroon;
+  }
   .coly {
     display: flex;
     justify-content: space-between;

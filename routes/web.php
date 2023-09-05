@@ -24,6 +24,15 @@ use App\Http\Controllers\MessageController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/apropos', function () {
+    return view('apropos');
+});
+Route::get('/envoi', function () {
+    return view('envoi');
+});
+Route::get('/location', function () {
+    return view('location');
+});
 
 
 //contacte

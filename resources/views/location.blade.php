@@ -12,19 +12,9 @@
         @section('content')
         <main>
             <section class=" section section-loading">
-                <h1 id='titre'>En un click seulement</br>effectuer votre reservation de billiet</h1>
+                <h1 id='titre'>En un click seulement effectuer votre</br>location de bus, muni-bus ou de voiture</h1>
                     <div class='form'>
                         <form action="">
-                            <div class='item-ir'>
-                            <div class='litte'>
-                                <input type="radio" />
-                                <label class="lab">Aller</label>
-                            </div>
-                            <div class='litte'>
-                                <input type="radio" />
-                                <label class="lab">Aller et Retour</label>
-                            </div>
-                            </div>
                             <div class='item-er'>
                             <div class="long">
                                 <label htmlFor="">Depart</label>
@@ -73,11 +63,6 @@
                         </form>
                     </div>
             </section>
-            <section class="section section-white">
-                    <div class="container">
-                        <h3 class="section-title">Choissisez une ligne de transport</h3>
-                    </div>
-            </section>
 
     		<section class="section section-second">
     			<div class="container">
@@ -86,19 +71,19 @@
                         <div class='clientele'>
                             <div class='react react-one'>
                                 <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Resservation de billets de bus</h3>
+                                <h3 class='fonction'>Transport Voyage</h3>
                             </div>
                                 <div class='react react-one'>
                                 <img src="{{asset('scss/route 2.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Demande location de bus et mini-bus</h3>
+                                <h3 class='fonction'>Transport Scolaire</h3>
                             </div>
                             <div class='react react-one'>
                                 <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Demande d'envoi de colis</h3>
+                                <h3 class='fonction'>Transport Societe</h3>
                             </div>
                             <div class='react react-one'>
                                 <img src="{{asset('scss/route 4.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Autre type de fonctionalite</h3>
+                                <h3 class='fonction'>Transport Personel</h3>
                             </div>
                         </div>
     			</div>

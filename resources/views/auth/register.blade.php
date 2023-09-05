@@ -77,7 +77,7 @@
                             <label for="profil" class="label">{{ __('Profil') }}</label>
 
                             <div class="col-md-6">
-                                 <select id="name" type="text" class="item-input" name="profil" value="{{ old('profil') }}" required autocomplete="profil" autofocus >
+                                 <select id="name" type="text" class="item-input1" name="profil" value="{{ old('profil') }}" required autocomplete="profil" autofocus >
                                     <option>Chauffeur</option>
                                     <option>client</option>
                                  </select>

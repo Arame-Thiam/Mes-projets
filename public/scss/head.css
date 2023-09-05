@@ -48,7 +48,6 @@ header {
     transition: border-color 0.25s;
     color: white;
     text-decoration: none;
-    width: 100%;
   }
   .syteme {
     display: flex;
@@ -86,7 +85,6 @@ header {
     color: black;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     display: block;
-    margin-bottom: 8px;
   }
   .footer-item {
     display: flex;
@@ -142,4 +140,136 @@ header {
     justify-content: space-between;
     padding: 24px 24px;
     background-color: white;
+  }
+
+  .section {
+    padding: 75px 0px;
+}
+
+ .section-baige {
+    background-color: gainsboro;
+}
+.section-nille {
+    background-color: #F8F9FA;
+}
+.section-white {
+  background-color: white;
+}
+.item-classe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.item-client {
+   display: flex;
+   gap: 30px;
+   justify-content: center;
+   align-items: center;
+}
+
+.section-title1 {
+  text-align: left;
+  color: #0D3973;
+  font-weight: 700;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+.section-title2 {
+    text-align: center;
+    color: #0D3973;
+    font-weight: 700;
+    padding-bottom: 32px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+
+
+
+  .section-second {
+    background-color: #F8F9FA;
+  }
+  
+  .section-white {
+      background-color: #ffffff;
+  }
+  
+  .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: left;
+      margin-bottom: 36px;
+    color: #0D3973;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  .title1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 36px;
+    color: #0D3973;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  .section-title2 {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 36px;
+    color: #0D3973;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  .activities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .activities-item {
+    background-color: wheat;
+    border-radius: 8px;
+    padding: 16px;
+    flex-shrink: 0;
+    width: 286px;
+    height: 300px;
+    flex-shrink: 0;
+  }
+  .pite {
+    width: 256px;
+  }
+  .sels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .comments {
+    width: 600px;
+    text-align: center;
+    padding-bottom: 32px;
+  }
+  .react {
+    background-color: white;
+    padding: 16px;
+    width: 184px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .img {
+    width: 65px;
+    height: 64px;
+    padding-bottom: 18px;
+  }
+
+  .clientele {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+
+  }
+  .fonction {
+    color: #0D3973;
+    text-align: center;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; 
   }

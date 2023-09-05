@@ -16,11 +16,11 @@
                 </div>
                 <div class="liens">
                     <ul class='item-liens'>
-                      <li><a to="/reservation" rel="stylesheet" class='item'>Reservation</a></li>
-                      <li><a to="/location" rel="stylesheet" class='item'>Location</a></li>
-                      <li><a to="/envoi_colis" rel="stylesheet" class='item'>Envoi colis</a></li>
-                      <li><a to="/a_propos" rel="stylesheet" class='item'>A Propos</a></li>
-                      <li><a to="/contact" rel="stylesheet" class='item'>Contact</a></li>
+                      <li><a href="/" rel="stylesheet" class='item'>Reservation</a></li>
+                      <li><a href="/location" rel="stylesheet" class='item'>Location</a></li>
+                      <li><a href="/envoi" rel="stylesheet" class='item'>Envoi colis</a></li>
+                      <li><a href="/apropos" rel="stylesheet" class='item'>A Propos</a></li>
+                      <li><a href="/contact" rel="stylesheet" class='item'>Contact</a></li>
                     </ul>
                 </div>
                 <div>
