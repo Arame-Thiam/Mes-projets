@@ -1,0 +1,51 @@
+.section {
+    padding: 75px 0;
+  }
+  label {
+    font-weight: 600;
+    display: inline;
+    color: black;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .item-input {
+    padding: 16px;
+    width: 90%;
+    background: gainsboro;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    border-left: 5px solid orange;
+  }
+  .formulaire {
+    background-color: white;
+    padding: 24px;
+    border-radius:  8px 0 0 8px;
+  }
+  .form-parent {
+    display: flex;
+    justify-content: center;
+  }
+  .section-image {
+    background-color: orange;
+    padding: 24px;
+    border-radius: 0 8px 8px 0;
+    
+  }
+  .messgae {
+    width: 95%;
+    background: gainsboro;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    border-left: 5px solid orange;
+  }
+  #but {
+    background-color: orange;
+    border: 1px solid orange;
+    padding: 16px;
+    color: white;
+    border-radius: 8px;
+  }
+  span {
+    color: orange;
+  }

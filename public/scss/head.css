@@ -1,0 +1,145 @@
+body {
+    background-color: #dedede;
+    margin: 0;
+}
+header {
+    background-color: white;
+  }
+  .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .item-liens {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    
+  }
+  .item {
+    cursor: pointer;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+  }
+  .item:hover {
+    color: red;
+  }
+  .deconnexion {
+    background-color: red;
+    padding: 8px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid red;
+    color: white;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    text-decoration: none;
+  }
+  .button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: orange;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+  }
+  .syteme {
+    display: flex;
+    gap: 10px;
+  }
+  .item-pied {
+    color: gray;
+  }
+  .input {
+    width: 100%;
+  }
+  .ul {
+    list-style: none;
+  }
+
+
+  .item-h4 {
+    color: orange;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  }
+  .inpute {
+    padding: 8px 24px;
+    width: 80%;
+    background: gainsboro;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+    padding-bottom: 16px;
+    padding: 16px 16px;
+    border-left: 5px solid orange;
+    padding-bottom: 16px;
+  }
+  label {
+    font-weight: 600;
+    display: inline;
+    color: black;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .footer-item {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    gap: 30px;
+  }
+  .grph1 {
+    counter-reset: #dedede;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .item-p {
+    display: flex;
+    gap: 10px;
+  }
+  footer {
+    background-color: #F8F9FA;
+    padding: 24px 24px;
+  }
+  #env {
+    padding-top: 0 16px 0 0 ;
+  }
+  .ronded {
+    background-color: orange;
+    padding: 16px 18px;
+    border-radius: 50%;
+  }
+  .rond {
+    color: white;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .ronded:hover {
+    background-color: maroon;
+  }
+  
+  
+  .item-pied {
+    color: black;
+    font-weight: 500;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    width: 180px;
+  }
+  .pied-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px;
+    background-color: white;
+  }

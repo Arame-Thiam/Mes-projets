@@ -1,0 +1,78 @@
+body {
+    background-color: #dedede;
+    margin: 0%;
+}
+.dash-head {
+    background-color: white;
+}
+.app {
+    background-color: white;
+    margin: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+
+}
+.dash {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    height: 100vh;
+}
+.titre {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#titre {
+    text-decoration: none;
+}
+.item-ul {
+    list-style: none;
+    gap: 22px;
+    display: grid;
+}
+.item-li {
+    text-decoration: none;
+    color: maroon;
+    padding: 16px;
+}
+.item-li:hover {
+    color: white;
+    background-color: maroon;
+    padding: 8px;
+    border-radius: 8px;
+}
+.dec {
+   text-decoration: none;
+   text-align: center;
+   list-style: none;
+}
+
+
+.bord {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    align-items: center;
+}
+.borde {
+    display: flex;
+    gap: 60px;
+}
+.codre {
+    background-color: white;
+    padding: 24px;
+    width: 20%;
+    border-radius: 8px;
+}
+.button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 8px 16px;
+    font-weight: 500;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: maroon;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
