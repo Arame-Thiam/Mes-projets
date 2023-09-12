@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <title>Document</title>
+    <style>
+     body {
+          background-color: #dedede;
+     }
+          .cade {
+               display: flex;
+               gap: 72px;
+          }
+    </style>
 </head>
 <body>
     @extends('layouts.app')
     @section('content')
         <div class="container">
-                <div>
+                <div> 
                     <div class="bord">
                          <div class="codre">
                               <h4>Profile</h4>
                               <p>{{ Auth::user()->prenom }}</p>
-                              <a href="#" class="button">Modifier</a>
+                              <a href="" class="button">Modifier</a>
                          </div>
                          <div class="codre">
                               <h4>Reservation</h4>
@@ -37,7 +47,7 @@
                          <div class="codre">
                               <h4>Message</h4>
                               <p>bienvenue charo</p>
-                              <a href="" class="button">voir</a>
+                              <a href="{{route('message.index')}}" class="button">voir</a>
                          </div>
                          <div class="codre">
                               <h4>Admin</h4>
@@ -56,7 +66,7 @@
                          </div>
                     </div>
 
-                    <div class="bord">
+                    <div class="cade">
                          <div class="codre">
                               <h4>Plannings</h4>
                               <p>bienvenue charo</p>
@@ -68,7 +78,7 @@
                               <a href="{{route('ligne.liste')}}" class="button">voir</a>
                          </div>
                          <div class="codre">
-                              <h4>nada</h4>
+                              <h4>Parametres</h4>
                               <p>bienvenue charo</p>
                               <a href="#" class="button">voir</a>
                          </div>

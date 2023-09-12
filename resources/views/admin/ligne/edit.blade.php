@@ -10,7 +10,8 @@
 <body>
 @extends('layouts.app')
 @section('content')
-    <div class="container mt-5">
+    <div class="container">
+      <div class="conter mt-5">
         <h1 class="text-center mb-4">Modification Ligne de Transport</h1>
         <form action="{{url('update/'.$ligne->id)}}" method="post">
             @csrf
@@ -46,6 +47,7 @@
             </div>
         </form>
     </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua8zV+wv5ll2m1Xa3Uf5c5Fd/j5xmQIjB6tF5rs5Yf5P6f5L5P5W5O3j5M5" crossorigin="anonymous"></script>
@@ -54,9 +56,14 @@
         body {
             background-color: #f8f9fa; 
         }
-
-        .container {
+        .conter {
             background-color: #fff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            width: 50%;
+        }
+        .container {
             padding: 20px; 
             border-radius: 10px; 
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 

@@ -10,23 +10,27 @@
 <body>
 @extends('layouts.app')
 @section('content')
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Ajout Ligne de Transport</h1>
+    
+    <div class="container">
+    <div class="conter mt-5">
+        <h1 class="text-center mb-4">Ajout de Ligne</h1>
         <form action="{{route('ligne.store')}}" method="post">
             @csrf
             <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="nombre_bus" class="form-label">Numero de Bus</label>
+                        <input type="number" class="form-control" id="nombre_bus" name="nombre_bus" placeholder="Nombre de bus">
+                    </div>
+                </div>
+
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="libelle" class="form-label">Libelle</label>
                         <input type="text" class="form-control" id="libelle" name="libelle" placeholder="Libelle de la ligne">
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="form-group">
-                        <label for="nombre_bus" class="form-label">Nombre de Bus</label>
-                        <input type="number" class="form-control" id="nombre_bus" name="nombre_bus" placeholder="Nombre de bus">
-                    </div>
-                </div>
+                
                 <div class="col-md-12">
                     <div class="form-group">
                         <label for="lieu" class="form-label">Lieu de Départ</label>
@@ -45,6 +49,7 @@
             </div>
         </form>
     </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua8zV+wv5ll2m1Xa3Uf5c5Fd/j5xmQIjB6tF5rs5Yf5P6f5L5P5W5O3j5M5" crossorigin="anonymous"></script>
@@ -53,11 +58,12 @@
             background-color: #f8f9fa; 
         }
 
-        .container {
+        .conter {
             background-color: #fff; 
             padding: 20px; 
             border-radius: 10px; 
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+            width: 50%;
         }
 
         .form-group {

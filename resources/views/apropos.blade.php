@@ -43,37 +43,37 @@
                     <section class="section section-white">
                         <div class="container">
 
-                        <h3 class="section-title2">Comment ca nous travaillons</h3>
+                        <h3 class="section-title2">Comment nous travaillons</h3>
                         <div class="clientele">
-                            <div>
+                            <div class="slide">
                                 <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
                                 <h2 class="fonction">Reserver votre billet de voyage</h2>
                                 <p>En tant que transporteur nous vous donner la possibilité de mettre en valeur 
                                     voyages afin d'avoir plus de clients. Vous aurez la possibilité de modifier, 
                                 </p>
                             </div>
-                            <div>
+                            <div class="slide">
                                 <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
                                 <h2 class="fonction">Envoyez vos colis</h2>
                                 <p>En tant que transporteur nous vous donner la possibilité de mettre en valeur 
                                     voyages afin d'avoir plus de clients. Vous aurez la possibilité de modifier, 
                                 </p>
                             </div>
-                            <div>
+                            <div class="slide">
                                 <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
                                 <h2 class="fonction">Effectuer une location</h2>
                                 <p>En tant que transporteur nous vous donner la possibilité de mettre en valeur 
                                     voyages afin d'avoir plus de clients. Vous aurez la possibilité de modifier, 
                                 </p>
                             </div>
-                            <div>
+                            <div class="slide">
                                 <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
                                 <h2 class="fonction">Superviser voter Trajet</h2>
                                 <p>En tant que transporteur nous vous donner la possibilité de mettre en valeur 
                                     voyages afin d'avoir plus de clients. Vous aurez la possibilité de modifier, 
                                 </p>
                             </div>
-                            <div>
+                            <div class="slide">
                                 <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
                                 <h2 class="fonction">Gestion d'accident et pane</h2>
                                 <p>En tant que transporteur nous vous donner la possibilité de mettre en valeur 
@@ -129,7 +129,9 @@
                   </div>
                 </div>
     		</section>
-           
         @endsection
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ asset('js/script.js')}}"></script>
 </body>
 </html>

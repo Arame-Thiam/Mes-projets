@@ -11,7 +11,7 @@
   }
   .item-input {
     padding: 16px;
-    width: 90%;
+    width: 100%;
     background: gainsboro;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -19,6 +19,7 @@
   }
   .formulaire {
     background-color: white;
+    width: 45%;
     padding: 24px;
     border-radius:  8px 0 0 8px;
   }
@@ -33,7 +34,7 @@
     
   }
   .messgae {
-    width: 95%;
+    width: 100%;
     background: gainsboro;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -48,4 +49,8 @@
   }
   span {
     color: orange;
+  }
+  .success {
+    background-color: green;
+    padding: 16px;
   }

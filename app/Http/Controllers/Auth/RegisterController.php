@@ -39,10 +39,10 @@ class RegisterController extends Controller
         if(Auth::check() && Auth::user()->profil === 'administrateur'){
             return '/admin/home';
         }
-        elseif(Auth::check() && Auth::user()->profil === 'Client'){
+        elseif(Auth::check() && Auth::user()->profil === 'client'){
             return '/';
         }
-        elseif(Auth::check() && Auth::user()->profil === 'Chauffeur'){
+        elseif(Auth::check() && Auth::user()->profil === 'chauffeur'){
             return '/chauffeur/index';
         }
         else{

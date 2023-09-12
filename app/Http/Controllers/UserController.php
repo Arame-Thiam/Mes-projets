@@ -10,7 +10,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = User::all();
+        $user = User::all('profil');
         return view('/admin/user',compact('user'));
         //
     }
@@ -55,7 +55,7 @@ class UserController extends Controller
     {
         $user=User::find($id);
         $user->prenom=$request->input('prenom');
-        $user->nom=$request->input('nom');
+        $user->nom=$request->input('nom'); 
         $user->adresse=$request->input('adresse');
         $user->telephone=$request->input('telephone');
         $user->profil=$request->input('profil');

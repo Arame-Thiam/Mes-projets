@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('lignes', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
             $table->string('libelle');
             $table->Integer('nombre_bus');
             $table->string('lieu');

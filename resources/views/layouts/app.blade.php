@@ -22,19 +22,21 @@
             <div class="logo">
                 <center><img src="{{asset('image/logo.jpg')}}" width="150px" srcset=""></center>
             </div>
-            <div class="menu">
-                <ul class="item-ul">
-                    <li><a href="{{route('home')}}" class="item-li">Tableau de bords</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Modifer Profile</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Reservation</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Location de Bus</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Envoi de Colis</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Message</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Gestion d'Utilidsteur</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Gestion de Bus</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Gestion de plannings</a></li>
-                    <li><a href="{{route('user.index')}}" class="item-li">Parametre</a></li>
-                </ul>
+            <div class="container">
+                    <div class="menu">
+                        <ul class="item-ul">
+                            <li><a href="{{route('home')}}" class="item-li">Tableau de bords</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Modifer Profile</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Reservation</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Location de Bus</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Envoi de Colis</a></li>
+                            <li><a href="{{route('message.index')}}" class="item-li">Message</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Gestion d'Utilidsteur</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Gestion de Bus</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Gestion plannings</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Parametre</a></li>
+                        </ul>
+                    </div>
             </div>
         </div>
 

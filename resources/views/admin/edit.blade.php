@@ -21,7 +21,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-12">
+                <div class="col-md-12"> 
                     <div class="form-group">
                         <label for="nom" class="form-label">Nom</label>
                         <input type="text" class="form-control" id="nom" name="nom" value="{{ $user->nom }}" >

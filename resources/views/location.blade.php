@@ -64,6 +64,14 @@
                     </div>
             </section>
 
+            <section class="section section-white">
+    			<div class="container">
+    				<h3 class="section-title2">Nos Bus en  Location</h3>
+
+                        
+    			</div>
+    		</section>
+
     		<section class="section section-second">
     			<div class="container">
     				<h3 class="title1">Nos services clientel</h3>

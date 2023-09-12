@@ -14,21 +14,21 @@
             <section class=" section section-loading">
                 <h1 id='titre'>En un click seulement</br>effectuer votre reservation de billiet</h1>
                     <div class='form'>
-                        <form action="">
+                        <form action="{{ route('welcome.search') }}" method="POST">
                             <div class='item-ir'>
-                            <div class='litte'>
-                                <input type="radio" />
-                                <label class="lab">Aller</label>
-                            </div>
-                            <div class='litte'>
-                                <input type="radio" />
-                                <label class="lab">Aller et Retour</label>
-                            </div>
+                                <div class='litte'>
+                                    <input type="radio" />
+                                    <label class="lab">Aller</label>
+                                </div>
+                                <div class='litte'>
+                                    <input type="radio" />
+                                    <label class="lab">Aller et Retour</label>
+                                </div>
                             </div>
                             <div class='item-er'>
                             <div class="long">
                                 <label htmlFor="">Depart</label>
-                                <select name="" class='nana' id='nana'>
+                                <select name="" class='lieu' id='nana'>
                                     <option value="">dakar</option>
                                     <option value="">kedougou</option>
                                     <option value="">thies</option>
@@ -44,8 +44,8 @@
                             </div>
                             <div class="long">
                                 <label htmlFor="">Arrivee</label>
-                                <select name="" class='nana'id='nana'>
-                                    <option value="">dakar</option>
+                                <select name="" class='destination'id='nana'>
+                                    <option value="">dakar</option> 
                                     <option value="">kedougou</option>
                                     <option value="">thies</option>
                                     <option value="">matam</option>
@@ -60,11 +60,11 @@
                             </div>
                             <div class="long">
                                 <label htmlFor="">Date depart</label>
-                                <input type="date" class='nana' />
+                                <input type="date" class='date' />
                             </div>
                             <div class="long">
                                 <label htmlFor="">Nombre de passager</label>
-                                <input type="number" class='nana' placeholder='nombre de passager' />
+                                <input type="number" class='kaly' placeholder='nombre de passager' />
                             </div>
                             <div class="style">
                                 <a href="" class='btn'>Confirm</a>

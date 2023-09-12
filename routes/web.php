@@ -7,6 +7,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\LigneController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\LocationbusController;
+use App\Http\Controllers\ReservationController;
 
 
  
@@ -21,36 +23,60 @@ use App\Http\Controllers\MessageController;
 |
 */
 //route client
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+ //   return view('welcome');
+//}); 
+Route::get('/', [ReservationController::class, 'index'])->name('welcome.index');
+Route::get('/', [ReservationController::class, 'search'])->name('welcome.search');
+
 Route::get('/apropos', function () {
     return view('apropos');
 });
 Route::get('/envoi', function () {
     return view('envoi');
 });
-Route::get('/location', function () {
-    return view('location');
+
+Route::get('/locationbus', function () {
+    return view('locationbus');
 });
 
+Route::get('/erreurligne', function () {
+    return view('erreurligne');
+});
 
+Route::get('/trajet', function () {
+    return view('trajet');
+});
+
+Route::get('/nana', function () {
+    return view('nana');
+});
+
+Route::get('/location', [LocationbusController::class, 'index'])->name('location.index');
+
+
+//messages
+Route::get('/admin/message', [MessageController::class, 'index'])->name('message.index');
+Route::delete('/admin/message/{id}', [MessageController::class, 'destroy'])->name('message.destroy');
 //contacte
-
 Route::get('/contact', [MessageController::class, 'create'])->name('contact.create');
-Route::get('/contact', [MessageController::class, 'store'])->name('contact.store');
+Route::post('/contact', [MessageController::class, 'store'])->name('contact.store');
 //
-Route::get('/admin/user', [UserController::class, 'index'])->name('user.index');
+Route::get('admin/user/liste', [UserController::class, 'index'])->name('user.index');
 Route::get('/admin/user/{id}', [UserController::class, 'show'])->name('user.show');
 Route::delete('/admin/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 Route::get('/admin/edit/{id}', [UserController::class,'edit'])->name('user.edit');
 Route::put('/admin/update/{id}', [UserController::class,'update'])->name('user.update');
 
 
+
+
 Auth::routes();
 //route chauffeur
-Route::get('/chauffeur/index', [App\Http\Controllers\ChauffeurController::class, 'index'])->name('chauffeur.index');
-
+//Route::get('/chauffeur/acceuil', [ChauffeurController::class, 'index'])->name('chauffeur.index');
+Route::get('./chauffeur/acceuil', function () {
+    return view('./chauffeur/acceuil');
+});
 
 
 
@@ -68,7 +94,7 @@ Route::get('/destroy/{id}', [BusController::class,'destroy'])->name('bus.destroy
 
 Route::get('/admin/ligne/liste', [LigneController::class,'index'])->name('ligne.liste');
 Route::get('/admin/ligne/create', [LigneController::class,'create'])->name('ligne.create');
-Route::post('/admin/ligne/store', [LigneController::class,'store'])->name('ligne.store');
+Route::post('/admin/ligne/create', [LigneController::class,'store'])->name('ligne.store');
 Route::get('/admin/ligne/edit/{id}', [LigneController::class,'edit'])->name('ligne.edit');
 Route::put('/admin/ligne/update/{id}', [LigneController::class,'update'])->name('ligne.update');
 Route::get('/destroy/{id}', [LigneController::class,'destroy'])->name('ligne.destroy');

@@ -7,20 +7,31 @@ use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
 {
-    
+    public function index()
+    {
+        $sms = Message::all();
+        return view('/admin/message',compact('sms'));
+        //
+    }
+   
+    public function destroy(string $id)
+    {
+        $sms = Message::find($id);
+        $sms->delete();
+        return redirect()->route('admin/message');
+        //
+    }
 
     public function create()
     {
-        $message = Message::all();
-        return view('/contact',compact('message'));
+        return view('contact');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created resource in storage. 
      */ 
     public function store(Request $request)
     {
-        $user = Auth::id();
 
         $request->validate([
             'name'=> 'required',
@@ -35,8 +46,7 @@ class MessageController extends Controller
             'email'=>$request->email,
             'telephone'=>$request->telephone,
             'description'=>$request->description,
-            'user_id'=>$user,
         ]);
-        return redirect()->route('/contact');
+        return redirect('/contact ')->with('success', 'Votre Message a ete bien envoye un de nos agent vous cantactera dans les plus bref delais mercie de patientez');
     }
 }

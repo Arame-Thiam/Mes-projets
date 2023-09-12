@@ -69,7 +69,7 @@ class LigneController extends Controller
         $ligne->destination=$request->input('destination');
 
         $ligne->update();
-        return redirect()->route('/admin/ligne/liste');
+        return redirect()->route('ligne.liste');
         //
     }
 
@@ -80,7 +80,7 @@ class LigneController extends Controller
     {
         $ligne = Lignes::find($id);
         $ligne->delete();
-        return redirect()->route('/admin/ligne/liste');
+        return redirect()->route('ligne.liste');
         //
     }
 }

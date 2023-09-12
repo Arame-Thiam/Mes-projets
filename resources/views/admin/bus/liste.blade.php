@@ -11,14 +11,15 @@
 @extends('layouts.app')
 @section('content') 
 <div class="col-lg-12">
-    <div class="pull-left">
-        <h1 align="center">Liste Des Bus</h1>
-        <hr>
-    </div>
-    <div class="pull-right">
-        <a href="{{route('bus.create')}}" class="btn btn-success">Inserer Bus</a></div>
-        <p>
-        <table class="table">
+    
+    <div class="container">
+        <div class="pull-left">
+            <h1 align="center">Liste Des Bus</h1>
+        </div>
+        <div class="pull-left">
+            <a href="{{route('bus.create')}}" class="btn btn-success">Inserer Bus</a>
+        </div><br>
+        <table class="table table-white table-hover ">
             <tr>
                 <th>Numero</th>
                 <th>Image</th>
@@ -41,6 +42,7 @@
             </tr>
             @endforeach
         </table>
+    </div>
     </div>
     @endsection
 </body>

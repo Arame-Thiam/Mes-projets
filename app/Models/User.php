@@ -53,8 +53,4 @@ class User extends Authenticatable
         return $this->hasOne(Permis::class);
     }
 
-    public function message(): HasMany
-    {
-        return $this->hasMany(Message::class);
-    }
 }

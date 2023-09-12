@@ -11,13 +11,13 @@
 @extends('layouts.app')
 @section('content')
 <div class="col-lg-12">
+    <div class="container">
     <div class="pull-left">
         <h1 align="center">Liste Des lignes De Transport</h1>
-        <hr>
     </div>
     <div class="pull-right">
-        <a href="{{route('ligne.create')}}" class="btn btn-success">Inserer ligne</a></div>
-        <table class="table">
+        <a href="{{route('ligne.create')}}" class="btn btn-success">Inserer ligne</a></div><br>
+        <table class="table table-white table-hover ">
             <tr>
                 <th>Libelle Ligne</th>
                 <th>Nombre de bus</th>
@@ -38,6 +38,7 @@
             </tr>
             @endforeach
         </table>
+    </div>
     </div>
     @endsection
 </body>

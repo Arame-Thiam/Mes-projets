@@ -15,8 +15,8 @@
                  
                   <h1 class="pull-left ">Liste des Utilisateurs</h1>
                     <form action="#" method="POST">
-                        <table class="table table-dark table-hover">
-                            <thead class="table-dark">
+                        <table class="table table-white table-hover">
+                            <thead class="table-white">
                                 <tr>
                                     <th>Prénom</th>
                                     <th>Nom</th>

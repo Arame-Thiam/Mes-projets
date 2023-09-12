@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
         <div class="login">
             <div class="card">
-                <div class="titre">{{ __('Inscription') }}</div>
+                <div class="titre">{{ __('Espace Inscription') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -78,7 +78,7 @@
 
                             <div class="col-md-6">
                                  <select id="name" type="text" class="item-input1" name="profil" value="{{ old('profil') }}" required autocomplete="profil" autofocus >
-                                    <option>Chauffeur</option>
+                                    <option>chauffeur</option>
                                     <option>client</option>
                                  </select>
                                 @error('profil')
