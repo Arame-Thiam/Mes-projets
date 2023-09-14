@@ -8,7 +8,7 @@
 <body>
 @extends('layouts.app')
     @section('content')
- <h1>liste des lignes de Transport</h1>
+       <h1>lites des demande de reservation</h1>
     @endsection
 </body>
 </html>

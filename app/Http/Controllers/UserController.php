@@ -70,23 +70,15 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $id)
+    
+
+public function destroy(string $id)
     {
+        $utilisateur = User::find($id);
+        $utilisateur->delete();
+        return redirect()->route('users.index');
         //
-    // Récupérez l'utilisateur que vous souhaitez supprimer par son ID
-    $utilisateur = User::find($id);
-
-    // Vérifiez si l'utilisateur existe
-    if (!$utilisateur) {
-        return redirect()->route('users.index')->with('error', 'L\'utilisateur n\'existe pas.');
     }
-
-    // Supprimez l'utilisateur
-    $utilisateur->delete();
-
-    // Redirigez l'utilisateur vers la liste des utilisateurs avec un message de succès
-    return redirect()->route('users.index')->with('success', 'L\'utilisateur a été supprimé avec succès.');
-}
 
     }
 

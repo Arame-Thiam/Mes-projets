@@ -11,7 +11,8 @@ class LocationbusController extends Controller
      */
     public function index()
     {
-         return view('location');
+        $loc = Bus::all();
+        return view('/admin/bus/liste',compact('bus'));
     }
 
     /**

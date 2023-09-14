@@ -6,9 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-@extends('layouts.app')
-    @section('content')
- <h1>liste des lignes de Transport</h1>
-    @endsection
+      <h1>liste des demmandes de lacation</h1>
 </body>
 </html>

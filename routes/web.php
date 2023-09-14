@@ -9,6 +9,8 @@ use App\Http\Controllers\LigneController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\LocationbusController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\PlanningsController;
+use App\Http\Controllers\VoyageController;
 
 
  
@@ -98,3 +100,12 @@ Route::post('/admin/ligne/create', [LigneController::class,'store'])->name('lign
 Route::get('/admin/ligne/edit/{id}', [LigneController::class,'edit'])->name('ligne.edit');
 Route::put('/admin/ligne/update/{id}', [LigneController::class,'update'])->name('ligne.update');
 Route::get('/destroy/{id}', [LigneController::class,'destroy'])->name('ligne.destroy');
+
+Route::get('/admin/reservation/liste', [VoyageController::class,'index'])->name('voyage.liste');
+
+Route::get('/admin/envoi/liste', [EnvoiController::class,'index'])->name('envoi.liste');
+
+Route::get('/admin/location/liste', [LocationController::class,'index'])->name('locations.liste');
+
+Route::get('/admin/planning/liste', [PlanningsController::class,'index'])->name('planning.liste');
+

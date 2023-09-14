@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+     body {
+          background-color: #dedede;
+     }
+          .cade {
+               display: flex;
+               gap: 72px;
+          }
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+                <div> 
+                    <div class="bord">
+                         <div class="codre">
+                              <h4>Profile</h4>
+                              <p>{{ Auth::user()->prenom }}</p>
+                              <a href="" class="button">Modifier</a>
+                         </div>
+                         <div class="codre">
+                              <h4>Reservation</h4>
+                              <p>bienvenue charo</p>
+                              <a href="" class="button">voir</a>
+                         </div>
+                         <div class="codre">
+                              <h4>Lcation Bus</h4>
+                              <p>bienvenue charo</p>
+                              <a href="" class="button">voir</a>
+                         </div>
+                         <div class="codre">
+                              <h4>Envoi de Colis</h4>
+                              <p>bienvenue charo</p>
+                              <a href="" class="button">voir</a>
+                         </div>
+                    </div>
+
+                    <div class="bord">
+                         <div class="codre">
+                              <h4>Message</h4>
+                              <p>bienvenue charo</p>
+                              <a href="{{route('message.index')}}" class="button">voir</a>
+                         </div>
+                         <div class="codre">
+                              <h4>Admin</h4>
+                              <p>bienvenue charo</p>
+                              <a href="" class="button">voir</a>
+                         </div>
+                         <div class="codre">
+                              <h4>Gestion de Bus</h4>
+                              <p>bienvenue charo</p>
+                              <a href="{{route('bus.liste')}}" class="button">voir</a>
+                         </div>
+                         <div class="codre">
+                              <h4>Utilisateur</h4>
+                              <p>bienvenue charo</p>
+                              <a href="{{route('user.index')}}" class="button">voir</a>
+                         </div>
+                    </div>
+
+                    <div class="cade">
+                         <div class="codre">
+                              <h4>Plannings</h4>
+                              <p>bienvenue charo</p>
+                              <a href="" class="button">voir</a>
+                         </div>
+                         <div class="codre">
+                              <h4>Lignes</h4>
+                              <p>bienvenue charo</p>
+                              <a href="{{route('ligne.liste')}}" class="button">voir</a>
+                         </div>
+                         <div class="codre">
+                              <h4>Parametres</h4>
+                              <p>bienvenue charo</p>
+                              <a href="#" class="button">voir</a>
+                         </div>
+                    </div>
+                </div>
+        </div>
+    @endsection
+</body>
+</html>
+
+
+
+<div class="cardBox">
+    <div class="card">
+        <div>
+            <div class="numbers">1,504</div>
+            <div class="cardName">Daily Views</div>
+        </div>
+
+        <div class="iconBx">
+            <ion-icon name="eye-outline"></ion-icon>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="numbers">80</div>
+            <div class="cardName">Sales</div>
+        </div>
+
+        <div class="iconBx">
+            <ion-icon name="cart-outline"></ion-icon>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="numbers">284</div>
+            <div class="cardName">Comments</div>
+        </div>
+
+        <div class="iconBx">
+            <ion-icon name="chatbubbles-outline"></ion-icon>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="numbers">$7,842</div>
+            <div class="cardName">Earning</div>
+        </div>
+
+        <div class="iconBx">
+            <ion-icon name="cash-outline"></ion-icon>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.bunny.net">
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+
+    <!-- Scripts -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+</head>
+<body>
+    <div class="dash">
+        <div class="dash-head">
+            <div class="logo">
+                <center><img src="{{asset('image/logo.jpg')}}" width="150px" srcset=""></center>
+            </div>
+            <div class="container">
+                    <div class="menu">
+                        <ul class="item-ul">
+                            <li><a href="{{route('home')}}" class="item-li">Tableau de bords</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Modifer Profile</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Reservation</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Location de Bus</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Envoi de Colis</a></li>
+                            <li><a href="{{route('message.index')}}" class="item-li">Message</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Gestion Utilidsteur</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Gestion de Bus</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Gestion plannings</a></li>
+                            <li><a href="{{route('user.index')}}" class="item-li">Parametre</a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="app">
+                <div>
+                    <a href="{{ url('/') }}" id="titre">
+                        <h2 class="titre">Administration</h2>
+                    </a>
+                </div>
+
+                <div class="" >
+                    <ul class="dec">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->prenom }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-end bg-rouge " aria-labelledby="navbarDropdown">
+                                    <a class="dec" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Deconnexion') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+            <main class="py-4">
+              @yield('content')
+            </main>
+        </div>
+    </div>
+</body>
+</html>

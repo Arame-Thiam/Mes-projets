@@ -1,94 +1,157 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <title>Responsive Admin Dashboard | Korsat X Parmaga</title>
+    <!-- ======= Styles ====== -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .nil {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
-
-    <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    </style>
 </head>
+
 <body>
-    <div class="dash">
-        <div class="dash-head">
-            <div class="logo">
-                <center><img src="{{asset('image/logo.jpg')}}" width="150px" srcset=""></center>
-            </div>
-            <div class="container">
-                    <div class="menu">
-                        <ul class="item-ul">
-                            <li><a href="{{route('home')}}" class="item-li">Tableau de bords</a></li>
-                            <li><a href="{{route('user.index')}}" class="item-li">Modifer Profile</a></li>
-                            <li><a href="{{route('user.index')}}" class="item-li">Reservation</a></li>
-                            <li><a href="{{route('user.index')}}" class="item-li">Location de Bus</a></li>
-                            <li><a href="{{route('user.index')}}" class="item-li">Envoi de Colis</a></li>
-                            <li><a href="{{route('message.index')}}" class="item-li">Message</a></li>
-                            <li><a href="{{route('user.index')}}" class="item-li">Gestion d'Utilidsteur</a></li>
-                            <li><a href="{{route('user.index')}}" class="item-li">Gestion de Bus</a></li>
-                            <li><a href="{{route('user.index')}}" class="item-li">Gestion plannings</a></li>
-                            <li><a href="{{route('user.index')}}" class="item-li">Parametre</a></li>
-                        </ul>
+    <!-- =============== Navigation ================ -->
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <div class="nil">
+                        <div>
+                                <a href="#">
+                                    <span class="icon">
+                                        <ion-icon name="Person"></ion-icon>
+                                    </span>
+                                    <span class="title">{{ Auth::user()->prenom}}</span>
+                                </a>
+                        </div>
+                        <div>
+                                <a href="#">
+                                    <span class="icon">
+                                        <ion-icon name="log-out-outline"></ion-icon>
+                                    </span>
+                                </a>
+                        </div>
                     </div>
-            </div>
+                </li>
+
+                <li>
+                    <a href="{{route('home')}}">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Tableau de bord</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="title">Modifier Profile</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('voyage.liste')}}">
+                        <span class="icon">
+                            <ion-icon name="cash"></ion-icon>
+                        </span>
+                        <span class="title">Reservation</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="bus-outline"></ion-icon>
+                        </span>
+                        <span class="title">Location de Bus</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="cash-outline"></ion-icon>
+                        </span>
+                        <span class="title">Envoi de Colis</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('ligne.liste')}}">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">Ligne Transport</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{route('user.index')}}">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion Utilidsteur</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('bus.liste')}}">
+                        <span class="icon">
+                            <ion-icon name="car"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Bus</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('planning.liste')}}">
+                        <span class="icon">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion plannings</span>
+                    </a>
+                </li>
+            </ul>
         </div>
 
-        <div class="">
-            <div class="app">
-                <div>
-                    <a href="{{ url('/') }}" id="titre">
-                        <h2 class="titre">Administration</h2>
-                    </a>
+        <!-- ========================= Main ==================== -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
                 </div>
 
-                <div class="" >
-                    <ul class="dec">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->prenom }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end bg-rouge " aria-labelledby="navbarDropdown">
-                                    <a class="dec" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Deconnexion') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
                 </div>
             </div>
             <main class="py-4">
               @yield('content')
             </main>
+            
         </div>
     </div>
+
+    <!-- =========== Scripts =========  -->
+    <script src="{{asset('js/main.js')}}"></script>
+
+    <!-- ====== ionicons ======= -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>
