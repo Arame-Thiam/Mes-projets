@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
     <title>Document</title>
+    <style>
+          .killer {
+              padding: 20px 0;
+              background-image: url("asset('./../image/lig.png)")
+          }
+    </style>
 </head>
 <body>
+@extends('layouts.header')
+        @section('content')
+<div class="killer">
+
+</div>
 <div class="container">
-    <div class="row justify-content-center">
+    <div>
         <div class="login">
-            <div class="card">
+            <div>
                 <div class="titre">{{ __('Espace de Connexion') }}</div>
 
-                <div class="card-body">
+                <div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="row mb-3">
+                        <div>
                             <label for="email" class="label">{{ __('Adresse Email') }}</label>
 
-                            <div class="col-md-6">
+                            <div>
                                 <input id="email" type="email" class="item-input" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="donner votre adresse email">
 
                                 @error('email')
@@ -31,10 +42,10 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div>
                             <label for="password" class="label">{{ __('Mot de Passe') }}</label>
 
-                            <div class="col-md-6">
+                            <div>
                                 <input id="password" type="password" class="item-input" name="password" required autocomplete="current-password" placeholder="donner votre mot de passe">
 
                                 @error('password')
@@ -45,7 +56,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
+                        <div>
                             <div class="coly">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -64,11 +75,11 @@
                             </div>
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                        <div>
+                            <div>
                                 <div>
                                     <a href="{{ route('register') }}" class="btn1">Sincrire</a>
-                                    <button type="submit" class="btn">
+                                    <button type="submit" class="btn0">
                                         {{ __('Se Connecter') }}
                                     </button>
                                 </div>
@@ -80,5 +91,49 @@
         </div>
     </div>
 </div>
+
+    <footer>
+            <div class="container">
+            <div class='footer-item'>
+                <div>
+                <div>
+                    <img src="{{asset('image/logo.png')}}" width='100px' height='60px'>
+                </div>
+                <p class='item-pied'>adipisicing elit. Optio ratione itaque sequi rem vel ipsa numquam at nam unde explicabo!</p>
+                </div>
+                <div>
+                <h4 class='item-h4'>Get in Touch</h4>
+                <p class='item-pied'> 8819 Ohio St. South Gate, CA 90280.</p>
+                <p class='item-pied'>charodesignestudio@gmail.com</p>
+                <p class='item-pied'>+221 337899087.</p>
+                </div>
+                <div>
+                <div class='item-p'>
+                    <p class='ronded'><a href="" class='rond'>FB</a></p>
+                    <p class='ronded'><a href="" class='rond'>IN</a></p>
+                    <p class='ronded'><a href="" class='rond'>LN</a></p>
+                    <p class='ronded'><a href="" class='rond'>YB</a></p>
+                </div>
+                <p class='item-pied'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda?.</p>
+                </div>
+                <div>
+                <h4 class='item-h4'>Join a Newsletter</h4>
+                <div>
+                    <label htmlFor="">your email</label>
+                    <input type="text" class='inpute' placeholder='ecrire ici...'/>
+                </div><br />
+                    <input type="submit" name="" id="env" class='button'/>
+                </div>
+            </div>
+            </div>
+            </footer>
+            <div class="pied-footer">
+                <div class="container">
+                    <div class="foot">
+                        <center><p>Created by | <strong>GERALD CHARO KEITA</strong> | @2023</p></center>
+                    </div>
+                </div>
+            </div>
+    @endsection
 </body>
 </html>

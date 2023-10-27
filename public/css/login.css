@@ -1,14 +1,14 @@
 body{
     background-color: #dedede;
 }
-.btn {
+.btn0 {
     border-radius: 8px;
-    border: 1px solid maroon;
+    border: 1px solid orange;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    background-color: maroon;
+    background-color: orange;
     cursor: pointer;
     transition: border-color 0.25s;
     color: white;
@@ -16,7 +16,7 @@ body{
   }
   .btn1 {
     border-radius: 8px;
-    border: 1px solid maroon;
+    border: 1px solid orange;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
@@ -24,26 +24,26 @@ body{
     background-color: white;
     cursor: pointer;
     transition: border-color 0.25s;
-    color: maroon;
+    color: orange;
     text-decoration: none;
   }
-  .btn:hover {
+  .btn0:hover {
     background-color: red;
     border: 1px solid red;
   }
   .btn1:hover {
-    background-color: maroon;
-    border: 1px solid maroon;
+    background-color: red;
+    border: 1px solid red;
     color: white;
   }
 
   .login{
     background-color: white;
     margin: auto;
-    width: 40%;
+    width: 60%;
     border-radius: 8px;
-    padding-left:20px ;
-    padding-right: 20px;
+    padding-left:50px ;
+    padding-right: 50px;
     margin-top: 30px;
     margin-bottom: 60px;
     padding: 32px;
@@ -58,12 +58,12 @@ body{
   }
   .item-input {
     padding: 16px;
-    width: 93%;
+    width: 100%;
     margin: auto;
     background: #dedede;
     border: 1px solid #dedede;
     border-radius: 8px;
-    border-left: 5px solid maroon;
+    border-left: 5px solid orange;
   }
   .item-input1 {
     padding: 16px;
@@ -72,7 +72,7 @@ body{
     background: #dedede;
     border: 1px solid #dedede;
     border-radius: 8px;
-    border-left: 5px solid maroon;
+    border-left: 5px solid orange;
   }
   .coly {
     display: flex;

@@ -10,9 +10,9 @@ class Lignes extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nom', 
+        'numero', 
         'libelle',
-        'nombre_bus', 
+        'image', 
         'lieu',
         'destination', 
     ];

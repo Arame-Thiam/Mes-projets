@@ -13,8 +13,11 @@ return new class extends Migration
     {
         Schema::create('buses', function (Blueprint $table) {
             $table->id();
+            $table->Integer('numero');
+            $table->String('image');
             $table->String('description');
-            $table->Integer('NombrePlaces');
+            $table->Integer('places');
+            $table->String('etat');
             $table->foreignId('lignes_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

@@ -8,10 +8,10 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     display: block;
     margin-bottom: 8px;
-  }
+  } 
   .item-input {
     padding: 16px;
-    width: 100%;
+    width: 80%;
     background: gainsboro;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -19,7 +19,7 @@
   }
   .formulaire {
     background-color: white;
-    width: 45%;
+    width: 40%;
     padding: 24px;
     border-radius:  8px 0 0 8px;
   }
@@ -31,10 +31,11 @@
     background-color: orange;
     padding: 24px;
     border-radius: 0 8px 8px 0;
-    
+    position: relative;
+    width: 328px;
   }
   .messgae {
-    width: 100%;
+    width: 80%;
     background: gainsboro;
     border: 1px solid gainsboro;
     border-radius: 8px;
@@ -53,4 +54,8 @@
   .success {
     background-color: green;
     padding: 16px;
+    color: white;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    width: 500px;
+    border-radius: 8px;
   }

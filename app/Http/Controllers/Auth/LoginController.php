@@ -41,18 +41,23 @@ class LoginController extends Controller
     public function redirectTo()
     {
         $a=Auth::user();
-
-        if(Auth::check() && Auth::user()->profil === 'administrateur'){
-            return '/admin/home';
-        }
-        elseif(Auth::check() && Auth::user()->profil === 'Client'){
-            return '/';
-        }
-        elseif(Auth::check() && Auth::user()->profil === 'Chauffeur'){
-            return '/chauffeur/index';
-        }
+        if ($a->statut==1) {
+            if(Auth::check() && Auth::user()->profil === 'administrateur'){
+                return '/admin/home';
+            }
+            elseif(Auth::check() && Auth::user()->profil === 'client'){
+                return '/';
+            }
+            elseif(Auth::check() && Auth::user()->profil === 'chauffeur'){
+                return '/chauffeur/index';
+            }
         else{
             return 'login';
         }
+    }else{
+        Auth::logout();
+        session()->flash('message','Votre compte a ete bloquer');
+        return 'login';
     }
+}
 }

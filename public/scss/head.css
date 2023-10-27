@@ -4,6 +4,7 @@ body {
 }
 header {
     background-color: white;
+    padding: 8px;
     
   }
   .head {
@@ -16,16 +17,16 @@ header {
     gap: 20px;
     align-items: center;
     list-style: none;
-    
   }
   .item {
     cursor: pointer;
     font-weight: 600;
-    color: black;
+    font-size: 20px;
+    color: #031333;
     text-decoration: none;
   }
   .item:hover {
-    color: red;
+    color: orange;
   }
   .deconnexion {
     background-color: red;
@@ -125,12 +126,13 @@ header {
     text-decoration: none;
   }
   .ronded:hover {
-    background-color: maroon;
+    background-color: white;
+    color: black;
   }
   
   
   .item-pied {
-    color: black;
+    color: white;
     font-weight: 500;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     width: 180px;
@@ -140,7 +142,9 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 24px 24px;
-    background-color: white;
+    background-color: #031333;
+    color: white;
+    border-top: 1px solid white;
   }
 
   .section {
@@ -148,11 +152,12 @@ header {
 }
 
  .section-baige {
-    background-color: gainsboro;
+    background-color: #F8F9FA;
+    background-size: cover;
 }
 .section-nille {
     background-color: #F8F9FA;
-}
+}   
 .section-white {
   background-color: white;
 }
@@ -161,6 +166,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  padding-top: 32px;
 }
 .item-client {
    display: flex;
@@ -171,7 +177,7 @@ header {
 
 .section-title1 {
   text-align: left;
-  color: #0D3973;
+  color: #031333;
   font-weight: 700;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -183,7 +189,9 @@ header {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
 
-
+footer {
+  background: #031333;
+}
 
   .section-second {
     background-color: #F8F9FA;
@@ -213,9 +221,10 @@ header {
       font-size: 24px;
       font-weight: 700;
       text-align: center;
+      font-size: 40px;
       margin-bottom: 36px;
-    color: #0D3973;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      color: #0D3973;
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
   .activities {
     display: flex;
@@ -248,14 +257,12 @@ header {
   .react {
     background-color: white;
     padding: 16px;
-    width: 184px;
+    width: 200px;
     border-radius: 8px;
     text-align: center;
   }
   .img {
-    width: 65px;
-    height: 64px;
-    padding-bottom: 18px;
+    padding-bottom: 24px;
   }
 
   .clientele {

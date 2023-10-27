@@ -9,6 +9,6 @@ class VoyageController extends Controller
     public function index()
     {
         $voyage = Demandes::all();
-        return view('/admin/reservation/liste',compact('voyage'));
+        return view('/admin/reservation/listes',compact('voyage'));
     }
 }

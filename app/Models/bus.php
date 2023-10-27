@@ -5,14 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class bus extends Model
+class Bus extends Model
 {
     use HasFactory;
 
 
     protected $fillable = [
+        'numero',
+        'image',
         'description', 
-        'NombrePlaces',
+        'places',
+        'etat',
+        'lignes_id',
     ];
 
     public function lignes(): BelongsTo

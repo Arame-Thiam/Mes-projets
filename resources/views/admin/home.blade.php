@@ -28,8 +28,10 @@
 
           <div class="card">
                <div>
-                    <div class="numbers">80</div>
-                    <div class="cardName">Reservation</div>
+                    <a href="{{route('voyage.liste')}}">
+                         <div class="numbers">20</div>
+                         <div class="cardName">Reservation Billet</div>
+                    </a>
                </div>
 
                <div class="iconBx">
@@ -39,8 +41,10 @@
 
           <div class="card">
                <div>
-                    <div class="numbers">284</div>
-                    <div class="cardName">Location Bus</div>
+                     <a href="{{route('locations.liste')}}">
+                         <div class="numbers">10</div>
+                         <div class="cardName">Demande Location</div>
+                     </a>
                </div>
 
                <div class="iconBx">
@@ -50,8 +54,10 @@
 
           <div class="card">
                <div>
-                    <div class="numbers">$7,842</div>
-                    <div class="cardName">Envoi de Colis</div>
+                    <a href="{{route('envoi.liste')}}">
+                         <div class="numbers">12</div>
+                         <div class="cardName">Demande d'envoi de Colis</div>
+                    </a>
                </div>
 
                <div class="iconBx">
@@ -63,7 +69,7 @@
           <div class="card">
                <div>
                     <a href="{{route('message.index')}}">
-                         <div class="numbers">1,504</div>
+                         <div class="numbers">50</div>
                          <div class="cardName">Messages</div>
                     </a>
                </div>
@@ -75,8 +81,10 @@
 
           <div class="card">
                <div>
-                    <div class="numbers">80</div>
-                    <div class="cardName">Gestion D'utilisateur</div>
+                    <a href="{{route('user.index')}}">
+                         <div class="numbers">30</div>
+                         <div class="cardName">utilisateur Inscrit</div>
+                    </a>
                </div>
 
                <div class="iconBx">
@@ -86,8 +94,10 @@
 
           <div class="card">
                <div>
-                    <div class="numbers">284</div>
-                    <div class="cardName">Gestion de Bus</div>
+                    <a href="{{route('bus.liste')}}">
+                         <div class="numbers">20</div>
+                         <div class="cardName">Bus Enregistre</div>
+                    </a>
                </div>
 
                <div class="iconBx">
@@ -97,8 +107,10 @@
 
           <div class="card">
                <div>
-                    <div class="numbers">$7,842</div>
-                    <div class="cardName">Gestion de plannings</div>
+                    <a href="{{route('planning.liste')}}">
+                         <div class="numbers">/Jour</div>
+                         <div class="cardName">Gestion de plannings</div>
+                    </a>
                </div>
 
                <div class="iconBx">
@@ -108,37 +120,27 @@
      </div>
      <div class="cardBox">
           <div class="card">
-               <div>
-                    <div class="numbers">1,504</div>
-                    <div class="cardName">Gestion de Trajets</div>
-               </div>
-
-               <div class="iconBx">
-                    <ion-icon name="eye-outline"></ion-icon>
-               </div>
-          </div>
-
-          <div class="card">
-               <div>
-                    <div class="numbers">1,504</div>
-                    <div class="cardName">Lignes de Transport</div>
-               </div>
-
-               <div class="iconBx">
-                    <ion-icon name="eye-outline"></ion-icon>
-               </div>
-          </div>
-
-          <div class="card">
-               <div>
-                    <div class="numbers">
-                         <ion-icon name="settings"></ion-icon>
+                    <div>
+                         <a href="{{route('ligne.liste')}}">
+                              <div class="numbers">15</div>
+                              <div class="cardName">Lignes de Transport</div>
+                         </a>
                     </div>
-                    <div class="cardName">Parametre</div>
-               </div>
 
-               
-          </div>
+                    <div class="iconBx">
+                         <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+               </div>
+               <div class="card">
+                    <div>
+                         <div class="numbers">Encours</div>
+                         <div class="cardName">Gestion de Trajets</div>
+                    </div>
+
+                    <div class="iconBx">
+                         <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+               </div>
      </div>
      <script src="{{asset('js/main.js')}}"></script>
 

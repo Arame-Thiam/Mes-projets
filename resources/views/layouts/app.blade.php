@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/stylee.css')}}">
     <title>Responsive Admin Dashboard | Korsat X Parmaga</title>
+    <style>
+          .ico {
+            color: white;
+            font-size: 30px;
+            text-style: none;
+          }
+    </style>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
@@ -35,11 +42,13 @@
                                 </a>
                         </div>
                         <div>
-                                <a href="#">
-                                    <span class="icon">
-                                        <ion-icon name="log-out-outline"></ion-icon>
-                                    </span>
-                                </a>
+                                    <a class="dec" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <span class="icon">
+                                           
+                                         </span>
+                                    </a>
                         </div>
                     </div>
                 </li>
@@ -72,7 +81,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{route('locations.liste')}}">
                         <span class="icon">
                             <ion-icon name="bus-outline"></ion-icon>
                         </span>
@@ -81,7 +90,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{route('envoi.liste')}}">
                         <span class="icon">
                             <ion-icon name="cash-outline"></ion-icon>
                         </span>
@@ -132,14 +141,40 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
 
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                <div class="icon">
+                <div class="icon" >
+                    <ul class="icon">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                                <div class="icon " aria-labelledby="navbarDropdown">
+                                    <a class="dec" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                         <ion-icon name="log-out-outline" class="ico"></ion-icon>
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                        @endguest
+                    </ul>
+                </div>
                 </div>
             </div>
-            <main class="py-4">
+            <main>
               @yield('content')
             </main>
             

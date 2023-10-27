@@ -13,12 +13,12 @@
          <div class="container">
              <div class="head">
                 <div class="logo">
-                    <img src="{{asset('image/logos.png')}}" width='100px' height='60px'>
+                    <img src="{{asset('image/logo.png')}}" width='100px' height='60px'>
                 </div>
                 <div class="liens"> 
                     <ul class='item-liens'>
                       <li><a href="/" rel="stylesheet" class='item'>Reservation</a></li>
-                      <li><a href="/location" rel="stylesheet" class='item'>Location</a></li>
+                      <li><a href="/locations   " rel="stylesheet" class='item'>Location</a></li>
                       <li><a href="/envoi" rel="stylesheet" class='item'>Envoi colis</a></li>
                       <li><a href="/apropos" rel="stylesheet" class='item'>A Propos</a></li>
                       <li><a href="/contact" rel="stylesheet" class='item'>Contact</a></li>

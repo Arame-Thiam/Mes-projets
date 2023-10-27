@@ -1,7 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use App\Models\Bus;
+use App\Models\Lignes;
 use Illuminate\Http\Request;
 
 class BusController extends Controller
@@ -12,16 +16,16 @@ class BusController extends Controller
     public function index()
     {
         $bus = Bus::all();
-        return view('/admin/bus/liste',compact('bus'));
-        //
+        return view('/admin/bus/liste', compact('bus'));
     }
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('/admin/bus/create');
-        //
+        $lignes = Lignes::all();
+        return view('/admin/bus/create', compact('lignes'));
     }
 
     /**
@@ -29,60 +33,108 @@ class BusController extends Controller
      */
     public function store(Request $request)
     {
-        $filename = '';
+        // Validez les données du formulaire
+        $validator = Validator::make($request->all(), [
+            'numero' => 'required|numeric',
+            'image' => 'required|image|max:2048',
+            'description' => 'required|string|max:255',
+            'places' => 'required|numeric',
+            'etat' => 'required|in:En_fonction,En_location',
+            'lignes_id' => 'required|exists:lignes,id',
+        ]);
 
-        if ($request->hasFile('img')) {
-            $filename = $request->getSchemeAndHttpHost() . '/assets/img' . time() . '.' . $request->img->extension();
-            $request->img->move(public_path('/assets/img'), $filename);
+        // Si la validation échoue, redirigez avec les erreurs
+        if ($validator->fails()) {
+            return redirect()->route('bus.create')
+                ->withErrors($validator)
+                ->withInput()
+                ->with('error', 'Veuillez corriger les erreurs dans le formulaire.');
         }
 
-        $bus = Bus::create([
-            'image'=>$filename,
-            'description'=>$request->description,
-            'NombrePlaces'=>$request->NombrePlaces,
-            'lignes_id'=>$request->lignes_id
-        ]);
-        return redirect()->route('/admin/bus/liste');
-        //
+        $bus = new Bus();
+        $bus->numero = $request->input('numero');
+        $bus->description = $request->input('description');
+        $bus->places = $request->input('places');
+        $bus->etat = $request->input('etat');
+        $bus->lignes_id = $request->input('lignes_id');
+
+        // Vérifiez si un fichier image est téléchargé
+        if ($request->hasFile('image')) {
+            $image = $request->file('image')->store('public/images');
+            $bus->image = str_replace('public/', '', $image);
+        }
+
+        $bus->save();
+        return redirect()->route('bus.liste');
     }
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
-        $bus=Bus::find($id);
-        return view('/admin/bus/edit',compact('bus'));
+        $bus = Bus::find($id);
+        $lignes = Lignes::all();
+        return view('/admin/bus/edit', compact('bus', 'lignes'));
     }
-        //
+
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        $bus=Bus::find($id);
-        $bus->description=$request->input('description');
-        $bus->NombrePlaces=$request->input('NombrePlaces');
-        $bus->lignes_id=$request->input('lignes_id');
+        // Validez les données du formulaire de mise à jour
+        $validator = Validator::make($request->all(), [
+            'numero' => 'required|numeric',
+            'description' => 'required|string|max:255',
+            'places' => 'required|numeric',
+            'etat' => 'required|in:En_fonction,En_location',
+            'lignes_id' => 'required|exists:lignes,id',
+            'image' => 'image|max:2048',
+        ]);
 
+        // Si la validation échoue, redirigez avec les erreurs
+        if ($validator->fails()) {
+            return redirect()->route('bus.edit', $id)
+                ->withErrors($validator)
+                ->withInput()
+                ->with('error', 'Veuillez corriger les erreurs dans le formulaire.');
+        }
+
+        $bus = Bus::find($id);
+        $bus->numero = $request->input('numero');
+        $bus->description = $request->input('description');
+        $bus->places = $request->input('places');
+        $bus->etat = $request->input('etat');
+        $bus->lignes_id = $request->input('lignes_id');
+
+        // Vérifiez si un fichier image est téléchargé
+        if ($request->hasFile('image')) {
+            $image = $request->file('image')->store('public/images');
+            $bus->image = str_replace('public/', '', $image);
+        }
+
+        // Enregistrez les modifications
         $bus->update();
-        return redirect()->route('/admin/bus/liste');
-        //
+        return redirect()->route('bus.liste')->with('success', 'Bus mis à jour avec succès.');
     }
+
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
         $bus = Bus::find($id);
+
+        // Vérifiez si le bus existe avant de le supprimer
+        if (!$bus) {
+            return redirect()->route('bus.liste')->with('error', 'Bus introuvable.');
+        }
+
+        // Supprimez le bus
         $bus->delete();
-        return redirect()->route('/admin/bus/liste');
-        //
+
+        // Redirigez avec un message de succès
+        return redirect()->route('bus.liste')->with('success', 'Bus supprimé avec succès.');
     }
 }
