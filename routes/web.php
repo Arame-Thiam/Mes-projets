@@ -13,6 +13,7 @@ use App\Http\Controllers\PlanningsController;
 use App\Http\Controllers\VoyageController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\EnvoiController;
+use App\Http\Controllers\TrajectController;
 
 
 /*
@@ -36,9 +37,22 @@ Route::get('/envoi', [ReservationController::class, 'charo'])->name('envoi.index
 Route::get('/apropos', function () {
     return view('apropos');
 });
+Route::get('/loc', [LocationbusController::class, 'Bus'])->name('locations.bus');
+//Route::get('/loc', [MessageController::class, 'create'])->name('locations.create');
+Route::post('/loc', [LocationbusController::class, 'store'])->name('locations.store');
 // Route::get('/envoi', function () {
 //     return view('envoi');
 // });
+
+
+Route::get('/infos', function () {
+    return view('infos');
+});
+Route::get('/paiement', function () {
+    return view('paiement');
+});
+
+
 
 Route::get('/locationbus', function () {
     return view('locationbus');
@@ -48,16 +62,15 @@ Route::get('/erreurligne', function () {
     return view('erreurligne');
 });
 
-Route::get('/trajet', function () {
-    return view('trajet');
-});
+Route::get('/voyages', [TrajectController::class, 'index'])->name('trajets.index');
+Route::get('/voyages/{id}', [TrajectController::class, 'show'])->name('trajets.show')->middleware('auth');
 
 Route::get('/nana', function () {
     return view('nana');
 });
 
 Route::get('/locations', [LocationbusController::class, 'index'])->name('locations.index');
-Route::get('/detail-locations/{id}', [LocationbusController::class, 'show'])->name('locations.detail');
+Route::get('/detail-locations/{id}', [LocationbusController::class, 'show'])->name('locations.detail')->middleware('auth');
 
 
 Route::get('/location', [LocationbusController::class, 'index'])->name('location.index');

@@ -1,11 +1,7 @@
-body {
-    background-color: #dedede;
-    margin: 0;
-}
+
 header {
     background-color: white;
     padding: 8px;
-    
   }
   .head {
     display: flex;
@@ -173,6 +169,7 @@ header {
    gap: 30px;
    justify-content: center;
    align-items: center;
+   
 }
 
 .section-title1 {

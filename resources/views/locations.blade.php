@@ -102,13 +102,18 @@
           strong {
             color: orange;
           }
+          span{
+            color: red;
+            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+            font-weight: 800;
+          }
     </style>
 </head>
 <body>
     @extends('layouts.header')
         @section('content')
         <main>
-            <section class=" sections section-loading">
+            <section class=" section section-loading">
                 <div class="container">
                                 
                 </div>
@@ -120,7 +125,7 @@
                                 <a href="{{route('contact.create')}}" class="btn0">Nous Contactez</a>     
                             </div>
                             <div>
-                                <img src="{{asset('image/nana (3).svg')}}" width="800px">
+                                <img src="{{asset('image/city bus-cuate.svg')}}" width="600px" height="500px">
                             </div>  
                         </div>           
                 </div>
@@ -133,7 +138,7 @@
               <div class="container">
                 <div class="row ">
                   @foreach($loc as $bus)
-                  @if($bus->etat === "En_fonction")
+                  @if($bus->etat === "En_location")
                     <div class="col-4">
                       <div class="prod ">
                         <a href="{{route('locations.detail',$bus->id)}}" class="voir">voir</a>
@@ -142,7 +147,7 @@
                         <hr>
                         <div class="flex">
                         <p>200L/jour</p>
-                        <p><strong>5000F cfa/Jour</strong></p>
+                        <p><span>2500F cfa/Jour</span></p>
                       </div>
                     </div><br>
                     </div>

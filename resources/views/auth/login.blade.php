@@ -10,6 +10,10 @@
               padding: 20px 0;
               background-image: url("asset('./../image/lig.png)")
           }
+          body {
+                background-image: url("{{asset('../image/bus.svg')}}");
+                margin: 0;
+            }
     </style>
 </head>
 <body>
@@ -20,7 +24,7 @@
 </div>
 <div class="container">
     <div>
-        <div class="login">
+        <div class="logine">
             <div>
                 <div class="titre">{{ __('Espace de Connexion') }}</div>
 
@@ -32,7 +36,7 @@
                             <label for="email" class="label">{{ __('Adresse Email') }}</label>
 
                             <div>
-                                <input id="email" type="email" class="item-input" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="donner votre adresse email">
+                                <input id="email" type="email" class="item-inpute" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="donner votre adresse email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -46,7 +50,7 @@
                             <label for="password" class="label">{{ __('Mot de Passe') }}</label>
 
                             <div>
-                                <input id="password" type="password" class="item-input" name="password" required autocomplete="current-password" placeholder="donner votre mot de passe">
+                                <input id="password" type="password" class="item-inpute" name="password" required autocomplete="current-password" placeholder="donner votre mot de passe">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -119,7 +123,7 @@
                 <div>
                 <h4 class='item-h4'>Join a Newsletter</h4>
                 <div>
-                    <label htmlFor="">your email</label>
+                    <label htmlFor="" class='item-pied'>your email</label>
                     <input type="text" class='inpute' placeholder='ecrire ici...'/>
                 </div><br />
                     <input type="submit" name="" id="env" class='button'/>

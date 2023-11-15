@@ -31,25 +31,25 @@
     		     
              <div class='item-classe'>
 
-                  <div>
-                        <img src="{{asset('scss/error_bus.svg')}}" alt="" />
-                  </div>
+                    <div>
+                        <h1 class="section-title1">A Propos de nous</h1>
+                          <p>
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laborum quasi et 
+                              vero aspernatur quam harum nam libero. Error quos ab exercitationem tempore dicta quae
+                              dolorem necessitatibus ratione mollitia enim aliquam facere possimus optio obcaecati
+                              vitae nobis odit et qui reprehenderit, tenetur doloribus. Quisquam ipsum sapiente 
+                              quae, atque necessitatibus tenetur nihil voluptate molestias saepe, nostrum laborum 
+                              deleniti repellendus assumenda dolor fugiat. Quod voluptatibus nisi amet totam nam!
+                                  Temporibus ullam quos tenetur recusandae numquam aperiam nobis, mollitia veritatis
+                                  unde quo ratione fuga autem ut dolor ex eaque ducimus eum similique nam quibusdam 
+                                  dolore impedit odit fugit alias! Perferendis, quaerat dolorum.
+                          </p>
+                          <a href="{{route('contact.create')}}" class="button" id="env">Nous Contactez</a>
+                    </div>
 
                   <div>
-                      <h1 class="section-title1">A Propos de nous</h1>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laborum quasi et 
-                            vero aspernatur quam harum nam libero. Error quos ab exercitationem tempore dicta quae
-                            dolorem necessitatibus ratione mollitia enim aliquam facere possimus optio obcaecati
-                            vitae nobis odit et qui reprehenderit, tenetur doloribus. Quisquam ipsum sapiente 
-                            quae, atque necessitatibus tenetur nihil voluptate molestias saepe, nostrum laborum 
-                            deleniti repellendus assumenda dolor fugiat. Quod voluptatibus nisi amet totam nam!
-                                Temporibus ullam quos tenetur recusandae numquam aperiam nobis, mollitia veritatis
-                                unde quo ratione fuga autem ut dolor ex eaque ducimus eum similique nam quibusdam 
-                                dolore impedit odit fugit alias! Perferendis, quaerat dolorum.
-                        </p>
-                        <a href="{{route('contact.create')}}" class="button" id="env">Nous Contactez</a>
-                </div>
+                        <img src="{{asset('image/Milestones of business projects-cuate.png')}}" width="550px" />
+                  </div>
 
              </div>
 

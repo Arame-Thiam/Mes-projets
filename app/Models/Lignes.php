@@ -15,12 +15,16 @@ class Lignes extends Model
         'image', 
         'lieu',
         'destination', 
+        'lignes_id',
     ];
 
 
 
 
-
+    public function trajet(): HasMany
+    {
+        return $this->hasMany(Trajet::class);
+    }
 
 
     public function bus(): HasMany

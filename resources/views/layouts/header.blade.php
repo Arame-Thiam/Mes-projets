@@ -32,7 +32,6 @@
                                 <li class="nav-item">
                                     <div class='syteme'>
                                         <div><a href="{{route('login')}}" class="button">Connexion</a></div>
-                                        <div><a href="{{route('register')}}" class='button'>Inscription</a></div>
                                     </div>
                                 </li>
                             @endif

@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
+    
+    <style>
+          .flex {
+            display: flex;
+            gap: 140px;
+          }
+          body {
+                background-image: url("{{asset('../image/bus.svg')}}");
+                margin: 0;
+            }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -18,115 +29,128 @@
                             <div>
                                 <form method="POST" action="{{ route('register') }}">
                                     @csrf
+                                    <table>
+                                        <tr>
+                                           <td>
+                                                <div>
+                                                            <label for="prenom" class="label">{{ __('Prenom') }}</label>
 
-                                    <div>
-                                        <label for="prenom" class="label">{{ __('Prenom') }}</label>
+                                                            <div>
+                                                                <input id="name" type="text" class="item-input" name="prenom" value="{{ old('prenom') }}" required autocomplete="prenom" autofocus placeholder="donner votre prenom">
 
-                                        <div>
-                                            <input id="name" type="text" class="item-input" name="prenom" value="{{ old('prenom') }}" required autocomplete="prenom" autofocus placeholder="donner votre prenom">
+                                                                @error('prenom')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <label for="adresse" class="label">{{ __('Adresse') }}</label>
 
-                                            @error('prenom')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
+                                                            <div>
+                                                                <input id="name" type="text" class="item-input" name="adresse" value="{{ old('adresse') }}" required autocomplete="adresse" autofocus  placeholder="donner votre adresse">
 
-                                    <div>
-                                        <label for="nom" class="label">{{ __('Nom') }}</label>
+                                                                @error('adresse')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                        </div>
+                                                        
+                                           </td>
+                                           <td>
+                                                    <div>
+                                                            <label for="nom" class="label">{{ __('Nom') }}</label>
 
-                                        <div>
-                                            <input id="name" type="text" class="item-input" name="nom" value="{{ old('nom') }}" required autocomplete="nom" autofocus placeholder="donner votre nom">
+                                                            <div>
+                                                                <input id="name" type="text" class="item-input" name="nom" value="{{ old('nom') }}" required autocomplete="nom" autofocus placeholder="donner votre nom">
 
-                                            @error('nom')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
+                                                                @error('nom')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                @enderror
+                                                            </div>
+                                                    </div>
 
-                                    <div>
-                                        <label for="adresse" class="label">{{ __('Adresse') }}</label>
+                                                    <div>
+                                                        <label for="telephone" class="label">{{ __('Telephone') }}</label>
 
-                                        <div>
-                                            <input id="name" type="text" class="item-input" name="adresse" value="{{ old('adresse') }}" required autocomplete="adresse" autofocus  placeholder="donner votre adresse">
+                                                        <div>
+                                                            <input id="name" type="text" class="item-input" name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone" autofocus placeholder="donner votre telephone">
 
-                                            @error('adresse')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
+                                                            @error('telephone')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                           </td>
+                                                
+                                        </tr>
+                                        <tr>
+                                           <td>
+                                                <div>
+                                                        <label for="profil" class="label">{{ __('Profil') }}</label>
 
-                                    <div>
-                                        <label for="telephone" class="label">{{ __('Telephone') }}</label>
+                                                        <div>
+                                                            <select id="name" type="text" class="item-input1" name="profil" value="{{ old('profil') }}" required autocomplete="profil" autofocus >
+                                                                <option>chauffeur</option>
+                                                                <option>client</option>
+                                                            </select>
+                                                            @error('profil')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <label for="password" class="label">{{ __('Password') }}</label>
 
-                                        <div>
-                                            <input id="name" type="text" class="item-input" name="telephone" value="{{ old('telephone') }}" required autocomplete="telephone" autofocus placeholder="donner votre telephone">
+                                                        <div>
+                                                            <input id="password" type="password" class="item-input" name="password" required autocomplete="new-password" placeholder="donner votre motpasse">
 
-                                            @error('telephone')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
+                                                            @error('password')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
+                                                   
+                                           </td>
+                                           <td>
+                                                   <div>
+                                                        <label for="email" class="label">{{ __('Email Address') }}</label>
 
-                                    <div>
-                                        <label for="profil" class="label">{{ __('Profil') }}</label>
+                                                        <div>
+                                                            <input id="email" type="email" class="item-input" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="donner votre email">
 
-                                        <div>
-                                            <select id="name" type="text" class="item-input1" name="profil" value="{{ old('profil') }}" required autocomplete="profil" autofocus >
-                                                <option>chauffeur</option>
-                                                <option>client</option>
-                                            </select>
-                                            @error('profil')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
+                                                            @error('email')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
 
-                                    <div>
-                                        <label for="email" class="label">{{ __('Email Address') }}</label>
+                                                    <div>
+                                                        <label for="password-confirm" class="label">{{ __('Confirm Password') }}</label>
 
-                                        <div>
-                                            <input id="email" type="email" class="item-input" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="donner votre email">
-
-                                            @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-
-                                    <div>
-                                        <label for="password" class="label">{{ __('Password') }}</label>
-
-                                        <div>
-                                            <input id="password" type="password" class="item-input" name="password" required autocomplete="new-password" placeholder="donner votre motpasse">
-
-                                            @error('password')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <label for="password-confirm" class="label">{{ __('Confirm Password') }}</label>
-
-                                        <div>
-                                            <input id="password-confirm" type="password" class="item-input" name="password_confirmation" required autocomplete="new-password" placeholder="comfirmez votre motpasse">
-                                        </div>
-                                    </div><br>
+                                                        <div>
+                                                            <input id="password-confirm" type="password" class="item-input" name="password_confirmation" required autocomplete="new-password" placeholder="comfirmez votre motpasse">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                
+                                        </tr>
+                                    </table>
+                                  
+                                    <br>
 
                                     <div>
                                         <div>
@@ -169,7 +193,7 @@
                         <div>
                         <h4 class='item-h4'>Join a Newsletter</h4>
                         <div>
-                            <label htmlFor="">your email</label>
+                        <label htmlFor="" class='item-pied'>your email</label>
                             <input type="text" class='inpute' placeholder='ecrire ici...'/>
                         </div><br />
                             <input type="submit" name="" id="env" class='button'/>

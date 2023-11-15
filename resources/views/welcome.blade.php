@@ -120,7 +120,8 @@
           }
           .bili {
             display: flex;
-            justify-content: space-between;
+            justify-content:center;
+            gap: 20px;
           }
           .par {
             color: #F4F3F3;
@@ -233,9 +234,9 @@
                                         <img src="{{ asset('storage/'.$ligne->image) }}" width="250px" height="180px">
                                     </div>
                                     <div>
-                                        <h5 class="ville">{{$ligne->lieu}}</h5>
-                                        <p class="para">{{$ligne->libelle}}</p>
-                                        <a href="" class="btn1">Voir Plus</a>
+                                        <h5 class="ville">{{$ligne->numero}}</h5>
+                                        <p class="para">{{$ligne->lieu}}</p>
+                                        <a href="{{route('trajets.show',$ligne->id)}}" class="btn1">Voir Plus</a>
                                     </div>
                                 </div>
                             @endforeach

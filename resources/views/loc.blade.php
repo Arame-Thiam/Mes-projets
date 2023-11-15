@@ -3,45 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/contact.css')}}">
     <title>Document</title>
     <style>
-          .img {
-            width: 408px;
-            height: 516px;
-            flex-shrink: 0;
-            width: 408px;
-            height: 516px;
-            top: 192px;
-            left: 689px;
-          }
-          .imaro {
-            width: 408px;
-            height: 608px;
-            position: absolute;
-            left: -120px;
-          }
-          body {
-                background-image: url("{{asset('../image/Bus.svg')}}");
-                margin: 0;
-          }
+           .sect {
+            background-image: url("{{asset('image/bus.svg')}}");
+            background-size: cover;
+           }
+           label {
+                font-weight: 600;
+                display: inline;
+                color: black;
+                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+                display: block;
+                margin-bottom: 8px;
+            } 
+            .item-input {
+                padding: 16px;
+                width: 98%;
+                background: gainsboro;
+                border: 1px solid gainsboro;
+                border-radius: 8px;
+                border-left: 5px solid orange;
+            }
+            #but {
+                background-color: orange;
+                border: 1px solid orange;
+                padding: 16px;
+                color: white;
+                border-radius: 8px;
+            }
+            .formulaire {
+                background-color: white;
+                width: 40%;
+                padding: 24px;
+                border-radius:  8px;
+            }
+            .form-parent {
+                display: flex;
+                justify-content: center;
+            }
+            .messgae {
+                width: 98%;
+                background: gainsboro;
+                border: 1px solid gainsboro;
+                border-radius: 8px;
+                border-left: 5px solid orange;
+            }
+            .success {
+                background-color: green;
+                padding: 16px;
+                color: white;
+                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+                width: 100%;
+                border-radius: 8px;
+            }
     </style>
 </head>
 <body>
      @extends('layouts.header')
         @section('content')
-            <div class="section">
-                    <div class="form-parent"> 
+
+        <div class="section sect">
+              <div class="form-parent"> 
                         <div class="formulaire">
                            @if(session('success'))
                                 <p class="success">{{session('success')}}</p>
                             @endif
-                            <h1><strong>Ecrivez<span>-Nous</span></strong></h1>
-                            <p>Pour Plus D'information veillez nous ecrire sur le formulaire ci-dessou</p>
-                            <form action="{{route('contact.store')}}" method="POST">
+                            <h1><strong>Location de Bus</strong></h1>
+                            <form action="{{route('locations.store')}}" method="POST">
                                 @csrf
                                     <div>
-                                        <label htmlFor="">Prenom et Nom</label>
+                                        <label htmlFor="">Nom de l'entreprise</label>
                                         <input type="text" class="item-input" name="name" placeholder="donner votre nom complet" />
                                     </div>
                                     <div>
@@ -49,7 +81,7 @@
                                         <input type="text" class="item-input" name="email" placeholder="donner votre email" />
                                     </div>
                                     <div>
-                                        <label htmlFor="">Telephone</label>
+                                        <label htmlFor="">Numero Telephone</label>
                                         <input type="number" class="item-input" name="telephone" placeholder="donner votre telephone" />
                                     </div>
                                     <div>
@@ -58,18 +90,10 @@
                                     </div><br>
                                     <button type="submit" id="but">Envoyer</button>
                             </form>
-                            
-                        </div>
-                      
-                        <div class="section-image">
-                               <img src="{{asset('image/contact.png')}}"  class="imaro">
                         </div>
                     </div>
-                </div>
-            </body>
-
-
-            <footer>
+        </div>
+          <footer>
         <div class="container">
           <div class='footer-item'>
             <div>
@@ -107,9 +131,11 @@
         <div class="pied-footer">
              <div class="container">
                 <div class="foot">
-                    <center><p>Created by | <strong>GERALD CHARO KEITA</strong> | @2023</p></center>
+                    <center><p class="pid">Created by | <strong>GERALD CHARO KEITA</strong> | @2023</p></center>
                 </div>
             </div>
         </div>
+
         @endsection
+</body>
 </html>

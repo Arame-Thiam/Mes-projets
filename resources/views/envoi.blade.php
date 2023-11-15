@@ -134,7 +134,8 @@
           }
           .bili {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 30px
           }
           .par {
             color: #F4F3F3;
@@ -152,7 +153,7 @@
     @extends('layouts.header')
         @section('content')
         <main>
-            <section class=" sections section-loading">
+        <section class=" sections section-loading">
             <div class="container">
                         <div class="flexs">
                             <div>
@@ -226,7 +227,7 @@
                             </div>  
                         </div>           
                 </div>
-            </section>
+        </section>
             <section class="section section-white">
                     <div class="container">
                         <h3 class="section-title2">Choissisez une ligne de transport</h3>
@@ -238,9 +239,9 @@
                                         <img src="{{ asset('storage/'.$ligne->image) }}" width="250px" height="180px">
                                     </div>
                                     <div>
-                                        <h5 class="ville">{{$ligne->lieu}}</h5>
-                                        <p class="para">{{$ligne->libelle}}</p>
-                                        <a href="" class="btn1">Voir Plus</a>
+                                        <h5 class="ville">{{$ligne->numero}}</h5>
+                                        <p class="para">{{$ligne->lieu}}</p>
+                                        <a href="{{route('trajets.show',$ligne->id)}}" class="btn1">Voir Plus</a>
                                     </div>
                                 </div>
                             @endforeach

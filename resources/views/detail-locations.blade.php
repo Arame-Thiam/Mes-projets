@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{asset('scss/reservation.css')}}">
     <title>Document</title>
     <style>
            .cont {
@@ -38,9 +37,12 @@
             color: white;
             text-decoration: none;
           }
+            .bod {
+              background-color: #dedede;
+            }
     </style>
 </head>
-<body> 
+<body class="bod"> 
 @extends('layouts.header')
     @section('content')
        <section class="section">
@@ -56,7 +58,7 @@
                                   <h5>Nombre de Places: <strong>{{$detail->places}}</strong></h5>
                                   <h5>Date de location: <strong>date du jour</strong></h5>
                                   <input type="number" class="item-input" placeholder="quantite"><br><br>
-                                  <a href="" class="btn1">Louer</a>
+                                  <a href="{{route('locations.bus')}}" class="btn1">Louer</a>
                               </div>
                    </div>
                </div>

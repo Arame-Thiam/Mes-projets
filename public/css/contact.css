@@ -1,3 +1,7 @@
+body {
+  background-image: url("{{asset('../image/bus.svg')}}");
+  margin: 0;
+}
 .section {
     padding: 75px 0;
   }

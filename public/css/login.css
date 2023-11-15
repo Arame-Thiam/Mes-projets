@@ -40,6 +40,18 @@ body{
   .login{
     background-color: white;
     margin: auto;
+    width: 47%;
+    border-radius: 8px;
+    padding-left:50px ;
+    padding-right: 50px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    padding: 32px;
+    box-shadow: 0 0.2rem 0.2rem rgb(83, 83, 83);
+  }
+  .logine{
+    background-color: white;
+    margin: auto;
     width: 60%;
     border-radius: 8px;
     padding-left:50px ;
@@ -47,6 +59,7 @@ body{
     margin-top: 30px;
     margin-bottom: 60px;
     padding: 32px;
+    box-shadow: 0 0.2rem 0.2rem rgb(83, 83, 83);
   }
 .label {
     font-weight: 600;
@@ -57,6 +70,15 @@ body{
     margin-bottom: 8px;
   }
   .item-input {
+    padding: 16px;
+    width: 274px;
+    margin: auto;
+    background: #dedede;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    border-left: 5px solid orange;
+  }
+  .item-inpute {
     padding: 16px;
     width: 100%;
     margin: auto;

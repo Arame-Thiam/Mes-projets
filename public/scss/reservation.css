@@ -1,3 +1,6 @@
+body {
+  background-color: #dedede;
+}
 .log {
     text-align: center;
     border-radius: 8px;
@@ -97,9 +100,9 @@
   .sections {
     padding: 200px 0;
 }
-  .section-second {
-    background-color: #F8F9FA;
-  }
+.section-second {
+  background-color: #F8F9FA;
+}
   
   .section-white {
       background-color: #ffffff;
@@ -110,8 +113,8 @@
       font-weight: 700;
       text-align: left;
       margin-bottom: 36px;
-    color: #0D3973;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      color: #0D3973;
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
   .title1 {
     font-size: 45px;
@@ -126,8 +129,8 @@
       font-weight: 700;
       text-align: center;
       margin-bottom: 36px;
-    color: #0D3973;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      color: #0D3973;
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
   .activities {
     display: flex;

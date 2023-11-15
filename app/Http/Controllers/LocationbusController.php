@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Bus;
+use App\Models\Message;
 use Illuminate\Http\Request;
 
 class LocationbusController extends Controller
@@ -15,21 +16,47 @@ class LocationbusController extends Controller
         return view('/locations',compact('loc'));
     }
 
+    public function Bus()
+    {
+        $a = Bus::all();
+        return view('/loc',compact('a'));
+    }
+
+
+    public function create()
+    {
+        return view('loc');
+    }
+
+    /**
+     * Store a newly created resource in storage. 
+     */ 
+    public function store(Request $request)
+    {
+
+        $request->validate([
+            'name'=> 'required',
+            'email'=> 'required',
+            'telephone'=> 'required',
+            'description'=> 'required',
+        ]);
+        
+
+       $sms = Message::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'telephone'=>$request->telephone,
+            'description'=>$request->description,
+        ]);
+        return redirect('/loc ')->with('success', 'Votre demmande a ete bien envoye un de nos agent vous cantactera dans les plus bref delais mercie de patientez');
+    }
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-        //
-    } 
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
-    }
 
     /**
      * Display the specified resource.
