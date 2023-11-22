@@ -62,7 +62,7 @@
                           <div>
                                <p>{{$ligne->date}}</p>
                                <h2 class="tit">{{$ligne->prix}} FCFA</h2>
-                               <button type="submit" name="" id="env" class='button'>Reservez</button>
+                               <a href="{{route('infos.app', $ligne->id)}}"  type="submit" name="" id="env" class='button'>Reservez</a>
                           </div>
                       </div>
                 </div>

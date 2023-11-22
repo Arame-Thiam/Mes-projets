@@ -16,7 +16,19 @@ class TrajectController extends Controller
         $a = Trajet::all();
         return view('/voyages', compact('a'));
      }
+ 
+     public function app(string $id)
+    {
+        $ligne = Trajet::findOrFail($id);
+        return view('/infos',compact('ligne'));
+    }
 
+
+    public function add(string $id)
+    {
+        $ligne = Trajet::findOrFail($id);
+        return view('/paiement',compact('ligne'));
+    }
 
 
     public function show(string $id)

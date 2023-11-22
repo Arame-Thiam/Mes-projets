@@ -10,8 +10,10 @@
            }
            .flex {
                 display: grid;
-                grid-template-columns: 1fr, 1fr;
-                margin: auto;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
            }
            .section {
                 padding: 50px 0;
@@ -25,16 +27,15 @@
             }
            .loge {
             background-color: white;
-            width: 45%;
+            width: 100%;
             border-radius: 6px;
             margin-bottom: 60px;
             padding: 24px;
            }
            .log {
             background-color: white;
-            width: 45%;
+            width: 100%;
             border-radius: 6px;
-            margin-bottom: 60px;
             padding: 24px;
            }
            .lab {
@@ -53,6 +54,13 @@
                 border: 1px solid #dedede;
                 border-radius: 8px;
                 border-left: 5px solid orange;
+            }
+            .full{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap:10px;
             }
     </style>
 </head>
@@ -85,7 +93,7 @@
                                                                 <input type="email" class="items" placeholder="donner votre adresse email">
                                                          </div><br>
                                                         <div>
-                                                            <button class="button">Confirm</button>
+                                                            <a href="{{route('paiement.add', $ligne->id)}}"  type="submit" name="" id="env" class='button' onclick="alert('votre de a ete bien prie en compte, veuillez effectuez le paiement en ligne pour finaliser votre demande')">Confirm</a>
                                                         </div>  
                                       </form>
                                   </div>
@@ -93,18 +101,18 @@
                                      <div class="log">
                                          <div class="titre">{{ __('Informatios du Voyage') }}</div>
                                          <div>
-                                              <h6><strong>Ville depart :</strong></h6>
-                                              <h6><strong>Ville arrivee :</strong></h6>
-                                              <h6><strong>Heure depart :</strong></h6>
-                                              <h6><strong>Date :</strong></h6>
+                                              <h6><strong>Ville depart :</strong>  {{$ligne->lieu}}</h6>
+                                              <h6><strong>Ville arrivee :</strong>  {{$ligne->arrivee}}</h6>
+                                              <h6><strong>Heure depart :</strong>  {{$ligne->heure}}</h6>
+                                              <h6><strong>Date :</strong>  {{$ligne->date}}</h6>
                                          </div>
                                      </div>
                                      <div class="log">
                                          <div class="titre">{{ __('Informatios du Paiement') }}</div>
                                          <div>
-                                              <h6><strong>Prix initial :</strong></h6>
-                                              <h6><strong>Commission :</strong></h6>
-                                              <h6><strong>Prix total :</strong></h6>
+                                              <h6><strong>Prix initial :</strong>  {{$ligne->prix}}</h6>
+                                              <h6><strong>Commission :</strong>  150F cfa</h6>
+                                              <h6><strong>Prix total :</strong> {{$ligne->prix}}+150</h6>
                                          </div>
                                      </div>
                                      <div class="log">
@@ -159,5 +167,8 @@
                 </div>
             </div>
         @endsection
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="{{ asset('js/charo.js')}}"></script>
     </body>
 </html>

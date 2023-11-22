@@ -63,7 +63,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="{{route('user.edit',$users->id)}}">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>

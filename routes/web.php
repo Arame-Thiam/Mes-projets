@@ -45,14 +45,18 @@ Route::post('/loc', [LocationbusController::class, 'store'])->name('locations.st
 // });
 
 
-Route::get('/infos', function () {
-    return view('infos');
-});
-Route::get('/paiement', function () {
-    return view('paiement');
-});
+// Route::get('/infos', function () {
+//     return view('infos');
+// });
+//Route::get('', [TrajectController::class, 'app'])->name('infos.app');
+Route::get('/infos/{id}', [TrajectController::class, 'app'])->name('infos.app');
+Route::get('/paiement/{id}', [TrajectController::class, 'add'])->name('paiement.add');
+// Route::get('/paiement', function () {
+//     return view('paiement');
+// });
 
-
+Route::get('/admin/edit', [UserController::class,'edit'])->name('user.edit');
+Route::put('/admin/update', [UserController::class,'update'])->name('user.update');
 
 Route::get('/locationbus', function () {
     return view('locationbus');

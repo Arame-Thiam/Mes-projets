@@ -14,28 +14,26 @@ class UserController extends Controller
         return view('/admin/user',compact('user'));
         //
     }
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    
+    public function edit()
     {
+        $user = auth()->user();
+        return view('admin.edit', compact('user'));
         //
     }
+    
+    public function update(Request $request)
+{
+        $user = auth()->user();
+        $user->prenom=$request->input('prenom');
+        $user->nom=$request->input('nom'); 
+        $user->adresse=$request->input('adresse');
+        $user->telephone=$request->input('telephone');
+        $user->email=$request->input('email');
+        $user->password=$request->input('password');
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+        $user->update();
+      return redirect()->route('user.edit')->with('success', 'Profile updated successfully.');
     }
 
     /**
