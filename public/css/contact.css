@@ -1,5 +1,5 @@
 body {
-  background-image: url("{{asset('../image/bus.svg')}}");
+  background-image: url("{{asset('../image/Bus.svg')}}");
   margin: 0;
 }
 .section {

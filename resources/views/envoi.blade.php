@@ -323,41 +323,42 @@
 
     			</div>
     		</section>
-
-            <footer>
-        <div class="container">
-          <div class='footer-item'>
-            <div>
-              <div>
-                 <img src="{{asset('image/logo.png')}}" width='100px' height='60px'>
-              </div>
-              <p class='item-pied'>adipisicing elit. Optio ratione itaque sequi rem vel ipsa numquam at nam unde explicabo!</p>
+        </main>
+        <footer>
+            <div class="container">
+            <div class='footer-item'>
+                <div>
+                <div>
+                    <img src="{{asset('image/logo.png')}}" width='100px' height='60px'>
+                </div>
+                <p class='item-pied'>Nous une entreprise specialisee sur la gestion des transport logitique.</p>
+                </div>
+                <div>
+                <h4 class='item-h4'>Informations</h4>
+                <p class='item-pied'>kdg,tripano face LT RN</p>
+                <p class='item-pied'>charodesignestudio@gmail.com</p>
+                <p class='item-pied'>+221 77 737 59 11</p>
+                </div>
+                <div>
+                <div class='item-p'>
+                    <p class='ronded'><a href="" class='rond'>FB</a></p>
+                    <p class='ronded'><a href="" class='rond'>IN</a></p>
+                    <p class='ronded'><a href="" class='rond'>LN</a></p>
+                    <p class='ronded'><a href="" class='rond'>YB</a></p>
+                </div>
+                <p class='item-pied'>Nous faisons des reservation en ligne, loaction de bus et demande d'envoi de colis.</p>
+                </div>
+                <div>
+                <h4 class='item-h4'>Nous Joindre par Newsletter</h4>
+                <div>
+                    <label htmlFor="" class='item-pied'>Votre adresse email</label>
+                    
+                    <input type="text" class='inpute' placeholder='ecrire ici...'/>
+                </div><br />
+                    <input type="submit" name="" id="env" class='button'/>
+                </div>
             </div>
-            <div>
-              <h4 class='item-h4'>Get in Touch</h4>
-              <p class='item-pied'> 8819 Ohio St. South Gate, CA 90280.</p>
-              <p class='item-pied'>charodesignestudio@gmail.com</p>
-              <p class='item-pied'>+221 337899087.</p>
             </div>
-            <div>
-              <div class='item-p'>
-                <p class='ronded'><a href="" class='rond'>FB</a></p>
-                <p class='ronded'><a href="" class='rond'>IN</a></p>
-                <p class='ronded'><a href="" class='rond'>LN</a></p>
-                <p class='ronded'><a href="" class='rond'>YB</a></p>
-              </div>
-              <p class='item-pied'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda?.</p>
-            </div>
-            <div>
-              <h4 class='item-h4'>Join a Newsletter</h4>
-              <div>
-                <label htmlFor="" class='item-pied'>your email</label>
-                <input type="text" class='inpute' placeholder='ecrire ici...'/>
-              </div><br />
-                <input type="submit" name="" id="env" class='button'/>
-            </div>
-          </div>
-        </div>
         </footer>
         <div class="pied-footer">
              <div class="container">
@@ -366,13 +367,6 @@
                 </div>
             </div>
         </div>
-        </main>
         @endsection
-    
-   
-   
-  
-  
-   
 </body>
 </html>

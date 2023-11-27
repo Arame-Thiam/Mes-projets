@@ -55,6 +55,8 @@ Route::get('/paiement/{id}', [TrajectController::class, 'add'])->name('paiement.
 //     return view('paiement');
 // });
 
+
+
 Route::get('/admin/edit', [UserController::class,'edit'])->name('user.edit');
 Route::put('/admin/update', [UserController::class,'update'])->name('user.update');
 
@@ -100,7 +102,9 @@ Route::get('/admin/user/debloquer/{id}', [UserController::class, 'unblock'])->na
 
 Auth::routes();
 //route chauffeur
-Route::get('/chauffeur/index', [ChauffeurController::class, 'index'])->name('chauffeur.index')->middleware('chauffeur');
+Route::get('/chauffeur/index', [ChauffeurController::class, 'index'])->name('index')->middleware('chauffeur');
+Route::get('/chauffeur/edit', [UserController::class,'edite'])->name('chauffeur.edit');
+Route::put('/chauffeur/update', [UserController::class,'updated'])->name('user.updated');
 
 
 

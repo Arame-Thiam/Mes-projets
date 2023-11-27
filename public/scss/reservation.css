@@ -325,3 +325,138 @@ text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
   object-fit: cover;
   z-index:-1; 
 }
+
+
+
+
+.bttn {
+  border-radius: 8px;
+  border: 1px solid orange;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: orange;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+  text-decoration: none;
+}
+.flex {
+  display: flex;
+  gap: 20px;
+}
+.pid {
+  font-size: 20px;
+}
+strong {
+  color:orange;
+}
+.box-container {
+  display:flex;
+  justify-content: center; 
+  gap: 30px;  
+}
+.box {
+  width:30rem;
+  text-align: center;
+  padding:0 1rem; 
+  box-shadow: 0 .1rem .1rem rgba(0,0,0,2  );
+}
+.box i {
+  font-size:6rem; 
+  margin-top:-3rem; 
+  color:var(--red);
+  opacity: .4;
+}
+.box p {
+  font-size:1.3rem; 
+  color:#666;
+  padding:2rem 0;
+}
+.box .user {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding:.5rem 0;
+  border-top:.1rem solid #3334;
+
+}
+.box .user img {
+  width:4rem; 
+  height:4rem; 
+  border-radius: 50%;
+  object-fit: cover;
+  margin:.8rem 1rem; 
+}
+.box .user .info h3 {
+  font-size:1.4rem; 
+  color:black;
+}
+.box .user .info span {
+  font-size:1rem; 
+  color: red;
+}
+.btn1 {
+  border: 1px solid orange;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: orange;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: white;
+  text-decoration: none;
+}
+.btn0 {
+  display: flex;
+  width: 178.513px;
+  height: 40.527px;
+  padding: 14px 17px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-bottom: 20px;
+  background-color: orange;
+}
+.boxe {
+  background-color: white;
+  box-shadow: 0 .1rem .1rem rgba(0,0,0,1);
+  padding: 16px;
+  width: 22%;
+}
+.ville {
+  padding-top: 8px;
+  font-size: 25px
+}
+.para {
+  color: gray;
+}
+.bili {
+  display: flex;
+  justify-content:center;
+  gap: 20px;
+}
+.par {
+  color: #F4F3F3;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  flex-shrink: 0;
+  padding-bottom: 20px;
+}
+.tit {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+.radio {
+  padding: 16px;
+  border: solid orange 2px;
+}

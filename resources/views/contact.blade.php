@@ -21,13 +21,13 @@
             position: absolute;
             left: -120px;
           }
-          body {
-                background-image: url("{{asset('../image/Bus.svg')}}");
+          .body {
+                background-color: #dedede;
                 margin: 0;
           }
     </style>
 </head>
-<body>
+<body class="body">
      @extends('layouts.header')
         @section('content')
             <div class="section">

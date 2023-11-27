@@ -76,16 +76,16 @@ label {
     </style>
 </head>
 <body>
-@extends('layouts.app')
+@extends('layouts.won')
 @section('content')
         
     <div class="container mt-5">
         <div class="login">
-        <h2 class="titre">Modification Admin</h2> 
+        <h2 class="titre">Modification Profil Chauffeur</h2> 
             @if(session('success'))
                 <p class="success">{{session('success')}}</p>
             @endif
-        <form action="{{route('user.update',$user->id)}}" method="post">
+        <form action="#" method="post">
             @csrf
             @method('PUT')
             <div>

@@ -21,8 +21,11 @@
      <div class="cardBox">
           <div class="card">
                <div>
-                    <div class="numbers">{{ Auth::user()->prenom}}</div>
-                    <div class="cardName">Modifier Profile</div>
+                    <?php $user = Auth::user()->id; ?>
+                    <a href="{{route('user.edit',$user)}}">
+                         <div class="numbers">{{ Auth::user()->prenom}}</div>
+                         <div class="cardName">Modifier Profile</div>
+                    </a>
                </div>
           </div>
 
@@ -56,7 +59,7 @@
                <div>
                     <a href="{{route('envoi.liste')}}">
                          <div class="numbers">12</div>
-                         <div class="cardName">Demande d'envoi de Colis</div>
+                         <div class="cardName">Envoi de Colis</div>
                     </a>
                </div>
 
@@ -83,7 +86,7 @@
                <div>
                     <a href="{{route('user.index')}}">
                          <div class="numbers">30</div>
-                         <div class="cardName">utilisateur Inscrit</div>
+                         <div class="cardName">Utilisateur Inscrit</div>
                     </a>
                </div>
 
@@ -133,8 +136,8 @@
                </div>
                <div class="card">
                     <div>
-                         <div class="numbers">Encours</div>
-                         <div class="cardName">Gestion de Trajets</div>
+                         <div class="numbers">Trajet</div>
+                         <div class="cardName">Supervision de Trajets</div>
                     </div>
 
                     <div class="iconBx">

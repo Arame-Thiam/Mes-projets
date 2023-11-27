@@ -7,138 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="{{asset('scss/reservation.css')}}">
     <link rel="stylesheet" href="{{asset('scss/main.css')}}">
-    <link rel="stylesheet" href="{{asset('scss/all.min.css')}}">
-    <link rel="stylesheet" href="{{asset('scss/normalize.css')}}">
     <title>Document</title>
-    <style>
-          .bttn {
-            border-radius: 8px;
-            border: 1px solid orange;
-            padding: 0.6em 1.2em;
-            font-size: 1em;
-            font-weight: 500;
-            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-            background-color: orange;
-            cursor: pointer;
-            transition: border-color 0.25s;
-            color: white;
-            text-decoration: none;
-          }
-          .flex {
-            display: flex;
-            gap: 20px;
-          }
-          .pid {
-            font-size: 20px;
-          }
-          strong {
-            color:orange;
-          }
-        .box-container {
-            display:flex;
-            justify-content: center; 
-            gap: 30px;  
-        }
-        .box {
-            width:30rem;
-            text-align: center;
-            padding:0 1rem; 
-            box-shadow: 0 .1rem .1rem rgba(0,0,0,2  );
-        }
-        .box i {
-            font-size:6rem; 
-            margin-top:-3rem; 
-            color:var(--red);
-            opacity: .4;
-        }
-        .box p {
-            font-size:1.3rem; 
-            color:#666;
-            padding:2rem 0;
-        }
-        .box .user {
-            display: flex;
-            align-items: center;
-            text-align: left;
-            padding:.5rem 0;
-            border-top:.1rem solid #3334;
-
-        }
-        .box .user img {
-            width:4rem; 
-            height:4rem; 
-            border-radius: 50%;
-            object-fit: cover;
-            margin:.8rem 1rem; 
-        }
-        .box .user .info h3 {
-            font-size:1.4rem; 
-            color:black;
-        }
-        .box .user .info span {
-            font-size:1rem; 
-            color: red;
-        }
-        .btn1 {
-            border: 1px solid orange;
-            padding: 0.6em 1.2em;
-            font-size: 1em;
-            font-weight: 500;
-            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-            background-color: orange;
-            cursor: pointer;
-            transition: border-color 0.25s;
-            color: white;
-            text-decoration: none;
-          }
-          .btn0 {
-            display: flex;
-            width: 178.513px;
-            height: 40.527px;
-            padding: 14px 17px;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            gap: 10px;
-            flex-shrink: 0;
-            padding-bottom: 20px;
-            background-color: orange;
-          }
-          .boxe {
-            background-color: white;
-            box-shadow: 0 .1rem .1rem rgba(0,0,0,1);
-            padding: 16px;
-            width: 22%;
-          }
-          .ville {
-            padding-top: 8px;
-            font-size: 25px
-          }
-          .para {
-            color: gray;
-          }
-          .bili {
-            display: flex;
-            justify-content:center;
-            gap: 20px;
-          }
-          .par {
-            color: #F4F3F3;
-            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 160%;
-            flex-shrink: 0;
-            padding-bottom: 20px;
-          }
-        .tit {
-            font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-            font-size: 30px;
-            font-weight: 400;
-        }
-    </style>
 </head>
 <body>
     @extends('layouts.header')
@@ -159,7 +28,7 @@
                                                 <h2 class="tit">Rechercher une Ligne</h2>
                                                 <div class="flex">
                                                     <div class="flex">
-                                                        <input type="radio" name="" id="">
+                                                        <input type="radio" name="" id="" class="radio">
                                                         <label for="">Aller</label>
                                                     </div>
                                                     <div class="flex">
@@ -319,75 +188,44 @@
     			</div>
     		</section>
 
-            <section class="section section-white">
-    			<div class="container">
-    				<h3 class="section-title2">Galeries D'image</h3>
-                    
-            <div>
-                <div class="flex">
-                    <div>
-                        <img src="{{asset('image/g-1.jpg')}}" width="400px">
-                    </div>
-                    <div>
-                        <img src="{{asset('image/g-2.jpg')}}" width="400px">
-                    </div> 
-                    <div>
-                        <img src="{{asset('image/g-3.jpg')}}" width="400px" height="270px">
-                    </div>
-                </div><br>
-                
-                <div class="flex">
-                    <div>
-                        <img src="{{asset('image/g-7.jpg')}}" width="400px">
-                    </div>
-                    <div>
-                        <img src="{{asset('image/g-8.jpg')}}" width="400px">
-                    </div>
-                    <div>
-                        <img src="{{asset('image/g-9.jpg')}}" width="400px"  height="270px">
-                    </div>
-                </div>
-            </div>
-                        
-    			</div>
-    		</section>
+            
         </main>
 
-        
         <footer>
-        <div class="container">
-          <div class='footer-item'>
-            <div>
-              <div>
-                 <img src="{{asset('image/logo.png')}}" width='100px' height='60px'>
-              </div>
-              <p class='item-pied'>adipisicing elit. Optio ratione itaque sequi rem vel ipsa numquam at nam unde explicabo!</p>
+            <div class="container">
+            <div class='footer-item'>
+                <div>
+                <div>
+                    <img src="{{asset('image/logo.png')}}" width='100px' height='60px'>
+                </div>
+                <p class='item-pied'>Nous une entreprise specialisee sur la gestion des transport logitique.</p>
+                </div>
+                <div>
+                <h4 class='item-h4'>Informations</h4>
+                <p class='item-pied'>kdg,tripano face LT RN</p>
+                <p class='item-pied'>charodesignestudio@gmail.com</p>
+                <p class='item-pied'>+221 77 737 59 11</p>
+                </div>
+                <div>
+                <div class='item-p'>
+                    <p class='ronded'><a href="" class='rond'>FB</a></p>
+                    <p class='ronded'><a href="" class='rond'>IN</a></p>
+                    <p class='ronded'><a href="" class='rond'>LN</a></p>
+                    <p class='ronded'><a href="" class='rond'>YB</a></p>
+                </div>
+                <p class='item-pied'>Nous faisons des reservation en ligne, loaction de bus et demande d'envoi de colis.</p>
+                </div>
+                <div>
+                <h4 class='item-h4'>Nous Joindre par Newsletter</h4>
+                <div>
+                    <label htmlFor="" class='item-pied'>Votre adresse email</label>
+                    
+                    <input type="text" class='inpute' placeholder='ecrire ici...'/>
+                </div><br />
+                    <input type="submit" name="" id="env" class='button'/>
+                </div>
             </div>
-            <div>
-              <h4 class='item-h4'>Get in Touch</h4>
-              <p class='item-pied'> 8819 Ohio St. South Gate, CA 90280.</p>
-              <p class='item-pied'>charodesignestudio@gmail.com</p>
-              <p class='item-pied'>+221 337899087.</p>
             </div>
-            <div>
-              <div class='item-p'>
-                <p class='ronded'><a href="" class='rond'>FB</a></p>
-                <p class='ronded'><a href="" class='rond'>IN</a></p>
-                <p class='ronded'><a href="" class='rond'>LN</a></p>
-                <p class='ronded'><a href="" class='rond'>YB</a></p>
-              </div>
-              <p class='item-pied'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, assumenda?.</p>
-            </div>
-            <div>
-              <h4 class='item-h4'>Join a Newsletter</h4>
-              <div>
-                <label htmlFor="" class='item-pied'>your email</label>
-                <input type="text" class='inpute' placeholder='ecrire ici...'/>
-              </div><br />
-                <input type="submit" name="" id="env" class='button'/>
-            </div>
-          </div>
-        </div>
         </footer>
         <div class="pied-footer">
              <div class="container">

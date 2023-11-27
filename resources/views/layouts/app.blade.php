@@ -63,7 +63,8 @@
                 </li>
 
                 <li>
-                    <a href="{{route('user.edit',$users->id)}}">
+                <?php $user = Auth::user()->id; ?>
+                    <a href="{{route('user.edit',$user)}}">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>

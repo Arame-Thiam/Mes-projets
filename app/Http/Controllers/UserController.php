@@ -33,7 +33,28 @@ class UserController extends Controller
         $user->password=$request->input('password');
 
         $user->update();
-      return redirect()->route('user.edit')->with('success', 'Profile updated successfully.');
+      return redirect()->route('home')->with('success', 'Votre profil a ete bien modifer.');
+    }
+
+    public function edite()
+    {
+        $user = auth()->user();
+        return view('chauffeur.edit', compact('user'));
+        //
+    }
+    
+    public function updated(Request $request)
+{
+        $user = auth()->user();
+        $user->prenom=$request->input('prenom');
+        $user->nom=$request->input('nom'); 
+        $user->adresse=$request->input('adresse');
+        $user->telephone=$request->input('telephone');
+        $user->email=$request->input('email');
+        $user->password=$request->input('password');
+
+        $user->update();
+      return redirect()->route('index')->with('success', 'Votre profil a ete bien modifer.');
     }
 
     /**
