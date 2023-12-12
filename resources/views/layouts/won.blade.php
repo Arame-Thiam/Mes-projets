@@ -63,7 +63,8 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                <?php $user = Auth::user()->id; ?>
+                    <a href="{{route('chauffeur.edit',$user)}}">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>

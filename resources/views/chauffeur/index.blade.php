@@ -23,6 +23,56 @@
                 </div>
            </div>
 
+           <div class="cardBox">
+          <div class="card">
+               <div>
+                    <?php $user = Auth::user()->id; ?>
+                    <a href="#">
+                         <div class="numbers">{{ Auth::user()->prenom}}</div>
+                         <div class="cardName">Modifier Profile</div>
+                    </a>
+               </div>
+          </div>
+
+          <div class="card">
+               <div>
+                    <a href="{{route('voyage.liste')}}">
+                         <div class="numbers">20</div>
+                         <div class="cardName">Reservation Billet</div>
+                    </a>
+               </div>
+
+               <div class="iconBx">
+                    <ion-icon name="cash"></ion-icon>
+               </div>
+          </div>
+
+          <div class="card">
+               <div>
+                     <a href="{{route('locations.liste')}}">
+                         <div class="numbers">10</div>
+                         <div class="cardName">Demande Location</div>
+                     </a>
+               </div>
+
+               <div class="iconBx">
+                    <ion-icon name="bus-outline"></ion-icon>
+               </div>
+          </div>
+
+          <div class="card">
+               <div>
+                    <a href="{{route('envoi.liste')}}">
+                         <div class="numbers">12</div>
+                         <div class="cardName">Envoi de Colis</div>
+                    </a>
+               </div>
+
+               <div class="iconBx">
+                    <ion-icon name="cash-outline"></ion-icon>
+               </div>
+          </div>
+     </div> 
            <h1 class="titre1">Listes des Planings par Jour</h1>
 
             <table class="table">

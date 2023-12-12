@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="{{asset('scss/head.css')}}">
+    <link rel="stylesheet" href="{{asset('scss/reservation.css')}}">
     <link rel="stylesheet" href="{{asset('scss/main.css')}}">
     <title>Document</title>
      <style>
@@ -25,36 +26,10 @@
 <body>
   @extends('layouts.header')
         @section('content')
-        
-        <section class="section section-baige">
-    			    <div class="container">
-    		     
-             <div class='item-classe'>
+                    <section class="section section-baige">
+                        <h1>A Prospos de nous</h1>         
+                    </section>
 
-                    <div>
-                        <h1 class="section-title1">A Propos de nous</h1>
-                          <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis laborum quasi et 
-                              vero aspernatur quam harum nam libero. Error quos ab exercitationem tempore dicta quae
-                              dolorem necessitatibus ratione mollitia enim aliquam facere possimus optio obcaecati
-                              vitae nobis odit et qui reprehenderit, tenetur doloribus. Quisquam ipsum sapiente 
-                              quae, atque necessitatibus tenetur nihil voluptate molestias saepe, nostrum laborum 
-                              deleniti repellendus assumenda dolor fugiat. Quod voluptatibus nisi amet totam nam!
-                                  Temporibus ullam quos tenetur recusandae numquam aperiam nobis, mollitia veritatis
-                                  unde quo ratione fuga autem ut dolor ex eaque ducimus eum similique nam quibusdam 
-                                  dolore impedit odit fugit alias! Perferendis, quaerat dolorum.
-                          </p>
-                          <a href="{{route('contact.create')}}" class="button" id="env">Nous Contactez</a>
-                    </div>
-
-                  <div>
-                        <img src="{{asset('image/Milestones of business projects-cuate.png')}}" width="550px" />
-                  </div>
-
-             </div>
-
-    			</div>
-    		</section>
                     <section class="section section-white">
                         <div class="container">
                         <h3 class="section-title2">Comment nous travaillons</h3>
@@ -98,35 +73,36 @@
                         </div>
                         </div>
                     </section>
-            <section class="section section-second">
-    			<div class="container">
-    				<h3 class="section-title2">Nos services clientel</h3>
 
-                        <div class='clientele'>
-                            <div class='react react-one'>
-                                <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Securite</h3>
+                    <section class="home" id="home">
+
+                        <h3 class="section-title2">Nos Services</h3>
+
+                        
+                            <div class="box-container"> 
+
+                                <div class="box">
+                                    <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
+                                    <h3>Reservation billets</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                                </div>
+                                <div class="box">
+                                    <img src="{{asset('scss/route 2.svg')}}" class="img" srcset="" />
+                                    <h3>Location de Bus</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                                </div>
+                                <div class="box">
+                                    <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
+                                    <h3>Envoi de Colis</h3>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                                </div>
                             </div>
-                                <div class='react react-one'>
-                                <img src="{{asset('scss/route 2.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Confort</h3>
-                            </div>
-                            <div class='react react-one'>
-                                <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Pourcentage</h3>
-                            </div>
-                            <div class='react react-one'>
-                                <img src="{{asset('scss/route 4.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Services Clients</h3>
-                            </div>
-                        </div>
-    			</div>
-    		</section>
+                    </section>
 
             <section class="section section-white">
                 <div class="container">
 
-                <h3 class="section-title2">Quelqu'uns de chers patenaires de travailles</h3>
+                <h3 class="section-title2">Nos patenaires de travailles</h3>
 
                   <div class="item-client">
                     <div>

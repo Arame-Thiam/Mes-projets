@@ -249,30 +249,30 @@
                     </div>
             </section>
 
-    		<section class="section section-second">
-    			<div class="container">
-    				<h3 class="section-title2">Nous faisons</h3>
+    		<section class="home" id="home">
 
-                        <div class='clientele'>
-                            <div class='react react-one'>
-                                <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Envoi de documents</h3>
-                            </div>
-                                <div class='react react-one'>
-                                <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Envoi de marchandises</h3>
-                            </div>
-                            <div class='react react-one'>
-                                <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Envoi de materiel de construction</h3>
-                            </div>
-                            <div class='react react-one'>
-                                <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
-                                <h3 class='fonction'>Envoi de cultures</h3>
-                            </div>
-                        </div>
-    			</div>
-    		</section>
+             <h3 class="section-title2">Nos Services</h3>
+
+            
+                <div class="box-container"> 
+
+                    <div class="box">
+                        <img src="{{asset('scss/route 1.svg')}}" class="img" srcset="" />
+                        <h3>Reservation billets</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                    </div>
+                    <div class="box">
+                        <img src="{{asset('scss/route 2.svg')}}" class="img" srcset="" />
+                        <h3>Location de Bus</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                    </div>
+                    <div class="box">
+                        <img src="{{asset('scss/route 3.svg')}}" class="img" srcset="" />
+                        <h3>Envoi de Colis</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, error?</p>
+                    </div>
+                </div>
+            </section>
 
     		<section class="section review section-white">
     			<div class="container">
