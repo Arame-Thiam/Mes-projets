@@ -17,7 +17,7 @@
           }
           .imaro {
             width: 408px;
-            height: 608px;
+            height: 565px;
             position: absolute;
             left: -120px;
           }
@@ -37,7 +37,7 @@
                                 <p class="success">{{session('success')}}</p>
                             @endif
                             <h1><strong>Ecrivez<span>-Nous</span></strong></h1>
-                            <p>Pour Plus D'information <br> veillez nous ecrire sur le formulaire ci-dessou</p>
+                           
                             <form action="{{route('contact.store')}}" method="POST">
                                 @csrf
                                     <div>
@@ -62,7 +62,7 @@
                         </div>
                       
                         <div class="section-image">
-                               <img src="{{asset('image/contact.png')}}"  class="imaro">
+                               <img src="{{asset('image/contact.jpg')}}"  class="imaro">
                         </div>
                     </div>
                 </div>

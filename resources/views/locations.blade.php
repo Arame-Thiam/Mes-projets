@@ -118,6 +118,50 @@
             display: block;
             margin: auto;
         }
+
+        .paragrap {
+            color: black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .secteur {
+            background-color: white;
+            padding: 16px;
+            border-radius: 8px;
+            border: 3px solid #dedede;
+            box-shadow: 0px 5px 15px -3px rgba(15, 179, 175, 0.18);
+        }
+        h4 {
+            color: #3C3C3B;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: normal;
+        }
+        button {
+            border-radius: 5px;
+            border: 1px solid #04366C;
+            background: #04366C;
+            box-shadow: 0px 5px 15px -3px rgba(15, 179, 175, 0.18);
+            padding: 12px;
+            color: white;
+            cursor: pointer;
+            
+        }
+        .p{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+            font-style: 10px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+        .flexes {
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+        }
     </style>
 </head>
 <body>
@@ -142,32 +186,39 @@
                 </div>
             </section>
 
+            
             <section class="section section-white">
-    			<div class="container">
-    				<h3 class="section-title2">Nos Bus en  Location</h3>
-         
-              <div class="container">
-                <div class="row ">
-                  @foreach($loc as $bus)
-                  @if($bus->etat === "En_location")
-                    <div class="col-4">
-                      <div class="prod ">
-                        <a href="{{route('locations.detail',$bus->id)}}" class="voir">voir</a>
-                        <center><img src="{{ asset('storage/'.$bus->image) }}" width="150px" height="80px"></center>
-                        <center><p>{{$bus->numero}}</p></center>
-                        <hr>
-                        <div class="flex">
-                        <p>200L/jour</p>
-                        <p><span>2500F cfa/Jour</span></p>
-                      </div>
-                    </div><br>
+                    <div class="container">
+                        <h3 class="section-title2">Choissisez une ligne de transport</h3>
+
+                        <div class="bili">
+                          @foreach($loc as $bus)
+                          @if($bus->etat === "En_location")
+                                <div class="secteur">
+                                    <img src="{{asset('storage/'.$bus->image) }}" width="280px" height="180px">
+                                    <h4>{{$bus->description}}</h4>
+                                    <div class="flexes">
+                                        <div>
+                                            <h5>{{$bus->places}} Places</h5>  
+                                        </div>
+                                        <div>
+                                            <h5>Mode Electrique</h5>
+                                        </div>
+                                    </div>
+                                   <div class="flexes">
+                                        <div>
+                                            <h5>Location par Jour</h5> 
+                                            <h5>5000f FCA</h5>  
+                                        </div>
+                                        <div>
+                                            <a href="{{route('locations.detail',$bus->id)}}" class="button">Louer</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                @endif
+                            @endforeach
                     </div>
-                    @endif
-                  @endforeach
-                </div>
-               </div>        
-    			    </div>
-    		</section>
+            </section>
 
     		<section class="home" id="home">
 
