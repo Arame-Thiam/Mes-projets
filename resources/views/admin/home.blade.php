@@ -13,11 +13,58 @@
           a{
                text-decoration: none;
           }
+          .flex {
+               display: flex;
+               justify-content: space-between;
+               padding: 32px;
+               align-items: center;
+          }
+          .input {
+               padding: 16px;
+               width: 70%;
+               background: gainsboro;
+               border: 1px solid gainsboro;
+               border-radius:  8px 0 0 8px;
+               border-left: 5px solid #2a2185;
+              
+           }
+               .btn {
+               background-color: #2a2185;
+               border: 1px solid #2a2185;
+               text-align: center;
+               font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+               font-size: 12px;
+               font-style: normal;
+               font-weight: 700;
+               cursor: pointer;
+               padding: 16px;
+               color: white;
+               border-radius: 0 8px 8px 0;
+          }
+               .titre {
+               color: #2a2185;
+               font-size: 30px;
+               font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
+          }
      </style>
 </head>
 <body>
 @extends('layouts.app')
     @section('content')
+
+          <div class="flex">
+                <div class="search">
+                    <form action="/chauffeur/index" method='get'>
+                        @method('get')
+                        <input type="text" name="search" value="{{ request()->get('search') }}" class="input" placeholder="rechercher ici">
+                        <button type="submit" class="btn">Chercher</button>
+                    </form>
+                </div>
+                <div class="espace">
+                    <h2 class="titre">ESPACE ADMINISTRATIF</h2>
+                </div>
+          </div>
+
      <div class="cardBox">
           <div class="card">
                <div>

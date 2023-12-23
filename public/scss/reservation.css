@@ -106,7 +106,7 @@ body {
 }
   
   .section-white {
-      background-color: #ffffff;
+      background-color: #eee;
   }
   
   .section-title {
@@ -127,6 +127,7 @@ body {
   }
   .section-title2 {
     font-size: 3rem;
+    padding-bottom: 32px;
     text-align: center;
     letter-spacing: 1rem;
     color: #0D3973;
@@ -355,28 +356,7 @@ text-shadow: 0 .3rem .5rem rgba(0,0,0,.1);
 strong {
   color:orange;
 }
-.box-container {
-  display:flex;
-  justify-content: center; 
-  gap: 30px;  
-}
-.box {
-  width:40rem;
-  text-align: center;
-  padding:0 1rem; 
-  box-shadow: 0 .1rem .1rem rgba(0,0,0,2  );
-}
-.box i {
-  font-size:6rem; 
-  margin-top:-3rem; 
-  color:var(--red);
-  opacity: .4;
-}
-.box p {
-  font-size:1.3rem; 
-  color:#666;
-  padding:2rem 0;
-}
+
 .box .user {
   display: flex;
   align-items: center;

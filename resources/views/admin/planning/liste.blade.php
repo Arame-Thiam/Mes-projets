@@ -108,7 +108,7 @@
                                 <td>
                                     <a href="{{route('planning.edit',$m->id)}}" class="btn1">modifier </a>
                                     &nbsp;
-                                    <a href="{{route('planning.destroy',$m->id)}}" class="btn2">Delete</a>
+                                    <a href="{{route('planning.destroy',$m->id)}}" class="btn2" onclick="alert('Vous allez supprimer cette enregistrement')">Delete</a>
                                 </td> 
                             </tr> 
                             @endforeach 

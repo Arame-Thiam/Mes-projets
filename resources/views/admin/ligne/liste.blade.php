@@ -106,7 +106,7 @@
                 <td>{{$med->destination}}</td>    
                 <td>
                     <a href="{{route('ligne.edit',$med->id)}}" class="btn" >Modifier</a>
-                    <a href="{{ route('ligne.destroy', $med->id) }}" class="btn2">Supprimer</a>
+                    <a href="{{ route('ligne.destroy', $med->id) }}" class="btn2" onclick="alert('Vous allez supprimer cette enregisgtrement')">Supprimer</a>
                 </td>
             </tr>
             

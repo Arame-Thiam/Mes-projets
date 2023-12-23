@@ -110,11 +110,11 @@
                 <td>{{$med->statut == 1 ? 'Activé' : 'Bloqué'}}</td>
                     <td>
                         @if ($med->statut == 1)
-                        <a href="{{route('user.bloquer', $med->id)}}" class="btn">Bloquer</a>
+                        <a href="{{route('user.bloquer', $med->id)}}" class="btn" onclick="alert('Vous allez bloquer ce compte')">Bloquer</a>
                         @else
                         <a href="{{route('user.debloquer', $med->id)}}" class="btn1">Débloquer</a>
                         @endif  
-                        <a href="{{route('user.destroy', $med->id)}}" class="btn2">Supprimer</a>
+                        <a href="{{route('user.destroy', $med->id)}}" class="btn2" onclick="alert('Vous allez suprimmer ce compte')">Supprimer</a>
                 </td>
             </tr>
             @endif

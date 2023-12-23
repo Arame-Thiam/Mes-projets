@@ -14,23 +14,15 @@
     justify-content: center; 
     gap: 30px;  
 }
-.box {
-    width:30rem;
-    text-align: center;
-    padding:0 1rem; 
-    box-shadow: 0 .1rem .1rem rgba(0,0,0,2  );
-}
-.box i {
-    font-size:6rem; 
-    margin-top:-3rem; 
-    color:var(--red);
-    opacity: .4;
-}
-   .box p {
-    font-size:1.3rem; 
-    color:#666;
-    padding:2rem 0;
-}
+
+.p{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+            font-style: 10px;
+            font-weight: 400;
+            line-height: 28px;
+        }
 .box .user {
     display: flex;
     align-items: center;
@@ -107,6 +99,25 @@
             font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
             font-weight: 800;
           }
+
+          .user  {
+            justify-content: center;
+        }
+        .flexe {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px
+        }
+        .slide {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .igms {
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -187,44 +198,32 @@
     			<div class="container">
     				<h3 class="section-title2">Ce qu'ils pensent de nous</h3>
 
-                    <div class="box-container">
+                    <div class="box-co">
 
-                        <div class="box">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto harum hic repellendus, quo cum at incidunt nulla quas quisquam optio?
-                            </p>
-                            <div class="user">
-                                <img src="{{asset('image/pic-1.png')}}" alt="">
-                                <div class="info">
-                                    <h3>Gerald charo KEITA</h3>
-                                    <span>jan 5, 2022</span>
+                        <div class="flexe">
+                            <div>
+                                <img src="{{asset('image/arrow-left-circle-fill (1).svg')}}" alt="" srcset="">
+                            </div>
+
+                                <div class="slide">
+                                    
+
+                                <div class="box">
+                                    <img src="{{asset('image/quote.svg')}}" class="igms" srcset="">
+                                        <p class="p">
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Ipsam officiis cum inventore aliquid nesciunt, magni consequuntur autem,<br> iusto unde temporibus iste? Quo tenetur minus, voluptatem praesentium eaque,<br> atque maiores ex sint, fugit excepturi natus aut voluptate. Soluta quas laboriosam omnis.<br> Provident saepe, pariatur alias ducimus ut laudantium tenetur quibusdam minus sit.
+                                        </p>
+                                    <div class="user">
+                                        <img src="{{asset('image/pic-3.png')}}" alt="">
+                                        <div class="info">
+                                            <h3>Oumoul khairy SALL</h3>
+                                            <span>jan 5, 2022</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="box">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto harum hic repellendus, quo cum at incidunt nulla quas quisquam optio?
-                            </p>
-                            <div class="user">
-                                <img src="{{asset('image/pic-2.png')}}" alt="">
-                                <div class="info">
-                                    <h3>Arame THIAM</h3>
-                                    <span>jan 5, 2022</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="box">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto harum hic repellendus, quo cum at incidunt nulla quas quisquam optio?
-                            </p>
-                            <div class="user">
-                                <img src="{{asset('image/pic-3.png')}}" alt="">
-                                <div class="info">
-                                    <h3>Oumoul khairy SALL</h3>
-                                    <span>jan 5, 2022</span>
-                                </div>
+                            <div>
+                               <img src="{{asset('image/arrow-left-circle-fill.svg')}}" alt="" srcset="">
                             </div>
                         </div>
 

@@ -37,7 +37,7 @@
                                 <p class="success">{{session('success')}}</p>
                             @endif
                             <h1><strong>Ecrivez<span>-Nous</span></strong></h1>
-                            <p>Pour Plus D'information veillez nous ecrire sur le formulaire ci-dessou</p>
+                            <p>Pour Plus D'information <br> veillez nous ecrire sur le formulaire ci-dessou</p>
                             <form action="{{route('contact.store')}}" method="POST">
                                 @csrf
                                     <div>

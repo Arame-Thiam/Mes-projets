@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="{{asset('scss/head.css')}}">
     <link rel="stylesheet" href="{{asset('scss/reservation.css')}}">
-    <link rel="stylesheet" href="{{asset('scss/main.css')}}">
     <title>Document</title>
      <style>
             .slide {
@@ -20,15 +19,61 @@
             #id {
               color: orange;
             }
-            
+            .sections {
+                padding:75px;
+                background-color: #dedded;
+            }
+            .coco {
+                color: orange;
+                font-family: Maven Pro;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 0.8px;
+            }
+            .layelaye {
+                color: #000;
+                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 25px; /* 156.25% */
+                letter-spacing: -0.32px;
+            }
      </style>
 </head>
 <body>
   @extends('layouts.header')
         @section('content')
-                    <section class="section section-baige">
-                        <h1>A Prospos de nous</h1>         
-                    </section>
+                  
+                        <section class="sections">
+                            <div class="container">
+                                    <div class="flex">
+                                        <div>
+                                            <h2 class="coco">Qui somme nous?</h2>
+                                            <p class="layelaye">
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                Voluptatum accusantium incidunt soluta nam neque aut, architecto et beatae,
+                                                dolorem nulla ex reiciendis culpa voluptates laudantium. Illum facere nobis,
+                                                sint officia possimus rem vel aperiam officiis ipsum, molestiae cumque eligendi
+                                                quisquam? Nesciunt, perferendis. Molestiae similique architecto 
+                                                at molestias autem corrupti maiores. <br> <br>
+
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                Voluptatum accusantium incidunt soluta nam neque aut, architecto et beatae,
+                                                dolorem nulla ex reiciendis culpa voluptates laudantium. Illum facere nobis,
+                                                sint officia possimus rem vel aperiam officiis ipsum, molestiae cumque eligendi
+                                                quisquam? Nesciunt, perferendis. Molestiae similique architecto 
+                                                at molestias autem corrupti maiores.
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <img src="{{asset('image/Group 106.png')}}" alt="" srcset="">
+                                        </div>
+                                </div>       
+                            </section> 
+                   </div>
 
                     <section class="section section-white">
                         <div class="container">

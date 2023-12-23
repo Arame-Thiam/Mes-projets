@@ -107,7 +107,7 @@
                 <td>{{$med->lignes_id}}</td>    
                 <td>
                     <a href="{{route('bus.edit',$med->id)}}" class="btn1" >Modifier</a>
-                    <a href="{{route('bus.destroy',$med->id)}}" onclick="vous" class="btn2">Supprimer</a>
+                    <a href="{{route('bus.destroy',$med->id)}}" onclick="vous" class="btn2" onclick="alert('Vous allez supprimer cette enregistrement')">Supprimer</a>
                 </td>
             </tr>
             @endforeach
