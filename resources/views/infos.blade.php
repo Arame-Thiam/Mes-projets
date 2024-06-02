@@ -75,25 +75,24 @@
                                   <div class="loge">
                                       <div class="titre">{{ __('Informatios du Passager') }}</div>
                                       <form action="">
-                                        
                                                          <div>
                                                               <label class="lab">Presom</label>
-                                                              <input type="text" class="items" placeholder="donner votre prenom" >
+                                                              <input type="text" class="items" placeholder="donner votre prenom" value="{{ $user->prenom }}">
                                                          </div>
                                                          <div>
                                                               <label class="lab">Nom</label>
-                                                              <input type="text" class="items" placeholder="donner votre nom">
+                                                              <input type="text" class="items" placeholder="donner votre nom" value="{{ $user->nom }}">
                                                          </div>
                                                          <div>
                                                                 <label class="lab">Telephone</label>
-                                                                <input type="number" class="items" placeholder="donner votre numero telephone">
+                                                                <input type="number" class="items" placeholder="donner votre numero telephone" value="{{ $user->telephone }}">
                                                          </div>
                                                          <div>
                                                                 <label class="lab">Email</label>
-                                                                <input type="email" class="items" placeholder="donner votre adresse email">
+                                                                <input type="email" class="items" placeholder="donner votre adresse email" value="{{ $user->email }}">
                                                          </div><br>
                                                         <div>
-                                                            <a href="{{route('paiement.add', $ligne->id)}}"  type="submit" name="" id="env" class='button' onclick="alert('votre de a ete bien prie en compte, veuillez effectuez le paiement en ligne pour finaliser votre demande')">Confirm</a>
+                                                            <a href="{{route('paiement.add', $user->id)}}"  type="submit" name="" id="env" class='button' onclick="alert('votre de a ete bien prie en compte, veuillez effectuez le paiement en ligne pour finaliser votre demande')">Confirm</a>
                                                         </div>  
                                       </form>
                                   </div>

@@ -162,6 +162,10 @@
             justify-content: space-between;
             align-items:center;
         }
+        .price {
+            color: red;
+            font-weight: 800;
+        }
     </style>
 </head>
 <body>
@@ -208,7 +212,7 @@
                                    <div class="flexes">
                                         <div>
                                             <h5>Location par Jour</h5> 
-                                            <h5>5000f FCA</h5>  
+                                            <h5 class="price">2500f FCA</h5>  
                                         </div>
                                         <div>
                                             <a href="{{route('locations.detail',$bus->id)}}" class="button">Louer</a>

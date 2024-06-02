@@ -24,36 +24,36 @@ class PlanningsController extends Controller
     }
 
     public function store(Request $request)
-    {
-        $validator = Validator::make($request->all(), [
-            'description' => 'required|string|max:255',
-            'lieu' => 'required|string|max:255',
-            'destination' => 'required|string|max:255',
-            'date' => 'required|date',
-            'heurs' => 'required|string|max:255',
-            'lignes_id' => 'required|exists:lignes,id',
-            'user_id' => 'required|exists:users,id',
-        ]);
+{
+    $validator = Validator::make($request->all(), [
+        'description' => 'required|string|max:255',
+        'lieu' => 'required|string|max:255',
+        'destination' => 'required|string|max:255',
+        'date' => 'required|date',
+        'heurs' => 'required|string|max:255', // Correction du nom du champ
+        'lignes_id' => 'required|exists:lignes,id',
+        'user_id' => 'required|exists:users,id',
+    ]);
 
-        if ($validator->fails()) {
-            return redirect()->route('planning.create')
-                ->withErrors($validator)
-                ->withInput()
-                ->with('error', 'Veuillez corriger les erreurs dans le formulaire.');
-        }
-
-        $planning = new Plannings();
-        $planning->description = $request->input('description');
-        $planning->lieu = $request->input('lieu');
-        $planning->destination = $request->input('destination');
-        $planning->date = $request->input('date');
-        $planning->heurs = $request->input('heurs');
-        $planning->lignes_id = $request->input('lignes_id');
-        $planning->user_id = $request->input('user_id');
-
-        $planning->save();
-        return redirect()->route('planning.liste');
+    if ($validator->fails()) {
+        return redirect()->route('planning.create')
+            ->withErrors($validator)
+            ->withInput()
+            ->with('error', 'Veuillez corriger les erreurs dans le formulaire.');
     }
+
+    $planning = new Plannings();
+    $planning->description = $request->input('description');
+    $planning->lieu = $request->input('lieu');
+    $planning->destination = $request->input('destination');
+    $planning->date = $request->input('date');
+    $planning->heurs = $request->input('heurs'); // Correction du nom du champ
+    $planning->lignes_id = $request->input('lignes_id');
+    $planning->user_id = $request->input('user_id');
+
+    $planning->save();
+    return redirect()->route('planning.liste');
+}
 
     public function edit(string $id)
     {

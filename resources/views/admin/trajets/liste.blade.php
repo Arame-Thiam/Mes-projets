@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <title>Document</title>
     <style>
@@ -16,7 +17,7 @@
            .flex {
             display: flex;
             align-items: center;
-            gap: 56%;
+            gap: 17%;
             padding: 24px;
            }
            .btn {
@@ -70,48 +71,51 @@
             }
             td {
                 padding: 16px;
+                font-size: 1em;
+                font-weight: 500;
+                font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
             }
     </style>
 </head>
 <body>
-    
-         <div class="flex">
-                <h1>listes des plannings</h1>
-                <a href="{{route('planning.create')}}" class="btn">ajouter</a>
-         </div>
-         <table class="table">
-              <thead>
-                <tr class="tr">
-                    <th>ID</th>
-                    <th>DESCRIPTION</th>
-                    <th>LIEU</th>
-                    <th>DESTINATION</th>
-                    <th>DATE</th>
-                    <th>HEURE</th>
-                    <th>USER ID</th>
-                    <th>LIGNES ID</th>
-                    <th>ACTIONS</th>
-                </tr>
-              </thead>
-              <tbody>
-                            @foreach ($planning as $m)
-                            <tr>
-                                <td>{{$m->id}}</td>
-                                <td>{{$m->description}}</td>
-                                <td>{{$m->lieu}}</td>
-                                <td>{{$m->destination}}</td>
-                                <td>{{$m->date}}</td>
-                                <td>{{$m->heurs}}</td>
-                                <td>{{$m->user_id}}</td> 
-                                <td>{{$m->lignes_id}}</td>  
-                                <td>
-                                    <a href="{{route('planning.edit',$m->id)}}" class="btn1">modifier </a>
-                                    &nbsp;
-                                    <a href="{{route('planning.destroy',$m->id)}}" class="btn2" onclick="alert('Vous allez supprimer cette enregistrement')">Delete</a>
-                                </td> 
-                            </tr> 
-                            @endforeach 
-              </tbody>
-         </table>
+@extends('layouts.app')
+@section('content')
+<div class="col-lg-12">
+    <div class="container">
+    <div class="flex">
+        <h1 align="center">Liste Des Trajets pour Une Ligne De Transport</h1>
+        <a href="{{route('trajets.create')}}" class="btn btn-success">Inserer un trajet</a>
+    </div>
+        <table class="table">
+            <tr class="tr">
+                <th>Identifient</th>
+                <th>Depart</th>
+                <th>Arrivee</th>
+                <th>Prix</th>
+                <th>Date</th>
+                <th>Heure de depart</th>
+                <th>Ligne de transport</th>
+                <th>Action</th>
+            </tr>
+            @foreach ($x as $med)
+            <tr>
+                <td>{{$med->id}}</td>  
+                <td>{{$med->lieu}}</td>    
+                <td>{{$med->arrivee}}</td>    
+                <td>{{$med->prix}}</td>    
+                <td>{{$med->date}}</td> 
+                <td>{{$med->heure}}</td>    
+                <td>{{$med->lignes_id}}</td>    
+                <td>
+                    <a href="#" class="btn" >Modifier</a>
+                    <a href="{{ route('trajets.destroy', $med->id) }}" class="btn2" onclick="alert('Vous allez supprimer cette enregisgtrement')">Supprimer</a>
+                </td>
+            </tr>
+            
+            @endforeach
+        </table>
+    </div>
+    </div>
+    @endsection
 </body>
 </html>

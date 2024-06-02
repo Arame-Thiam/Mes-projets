@@ -40,9 +40,10 @@
 <body class="body">
      @extends('layouts.header')
         @section('content')
-        
+        @foreach ($trajects as $ligne)
        <div class="section">
             <div class="container">
+            
                 <div class="billet">
                       <div class="flexs">
                           <div><h3>Sen Voyage Galsen</h3></div>
@@ -62,14 +63,16 @@
                           <div>
                                <p>{{$ligne->date}}</p>
                                <h2 class="tit">{{$ligne->prix}} FCFA</h2>
-                               <a href="{{route('infos.app', $ligne->id)}}"  type="submit" name="" id="env" class='button'>Reservez</a>
-                          </div>
+                               <a href="{{route('infos.app', $ligne->id)}}" type="submit" name="" id="env" class='button'>Reservez</a>
+                               
+                            </div>
                       </div>
                 </div>
+            
             </div>
        </div>
-
-       <footer>
+      @endforeach
+       <footer> 
             <div class="container">
             <div class='footer-item'>
                 <div>

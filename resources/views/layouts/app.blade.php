@@ -109,6 +109,15 @@
                 </li>
 
                 <li>
+                    <a href="{{route('trajets.liste')}}">
+                        <span class="icon">
+                            <ion-icon name="car-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion de Trajets</span>
+                    </a>
+                </li>
+
+                <li>
                     <a href="{{route('user.index')}}">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>

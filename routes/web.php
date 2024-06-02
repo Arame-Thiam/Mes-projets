@@ -14,6 +14,7 @@ use App\Http\Controllers\VoyageController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\EnvoiController;
 use App\Http\Controllers\TrajectController;
+use App\Http\Controllers\TrajetsController;
 
 
 /*
@@ -53,7 +54,7 @@ Route::get('/infos/{id}', [TrajectController::class, 'app'])->name('infos.app');
 Route::get('/paiement/{id}', [TrajectController::class, 'add'])->name('paiement.add');
 // Route::get('/paiement', function () {
 //     return view('paiement');
-// });
+// });=
 
 
 
@@ -68,13 +69,13 @@ Route::get('/erreurligne', function () {
     return view('erreurligne');
 });
 
-Route::get('/voyages', [TrajectController::class, 'index'])->name('trajets.index');
-Route::get('/voyages/{id}', [TrajectController::class, 'show'])->name('trajets.show')->middleware('auth');
+// Route::get('/voyages', [TrajectController::class, 'index'])->name('trajets.index');
+Route::get('/voyages', [TrajectController::class, 'show'])->name('trajets.show')->middleware('auth');
 
 Route::get('/nana', function () {
     return view('nana');
 });
-
+ 
 Route::get('/locations', [LocationbusController::class, 'index'])->name('locations.index');
 Route::get('/detail-locations/{id}', [LocationbusController::class, 'show'])->name('locations.detail')->middleware('auth');
 
@@ -111,12 +112,21 @@ Route::put('/chauffeur/update', [UserController::class,'updated'])->name('user.u
 //route admin
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('admin');
 
+Route::get('/admin/trajets/liste', [trajetsController::class,'index'])->name('trajets.liste');
+Route::get('/admin/trajets/create', [trajetsController::class,'create'])->name('trajets.create');
+Route::post('/admin/trajets/create', [trajetsController::class,'store'])->name('trajets.store');
+// Route::get('/admin/bus/edit/{id}', [BusController::class,'edit'])->name('bus.edit');
+// Route::put('/admin/bus/update/{id}', [BusController::class,'update'])->name('bus.update');
+Route::get('/admin/trajets/destroy/{id}', [trajetsController::class,'destroy'])->name('trajets.destroy');
+
+
 Route::get('/admin/bus/liste', [BusController::class,'index'])->name('bus.liste');
 Route::get('/admin/bus/create', [BusController::class,'create'])->name('bus.create');
 Route::post('/admin/bus/create', [BusController::class,'store'])->name('bus.store');
 Route::get('/admin/bus/edit/{id}', [BusController::class,'edit'])->name('bus.edit');
 Route::put('/admin/bus/update/{id}', [BusController::class,'update'])->name('bus.update');
 Route::get('admin/bus/destroy/{id}', [BusController::class,'destroy'])->name('bus.destroy');
+
 
 Route::get('/admin/ligne/liste', [LigneController::class,'index'])->name('ligne.liste');
 Route::get('/admin/ligne/create', [LigneController::class,'create'])->name('ligne.create');
@@ -126,9 +136,7 @@ Route::put('/admin/ligne/update/{id}', [LigneController::class,'update'])->name(
 Route::get('/destroy/{id}', [LigneController::class,'destroy'])->name('ligne.destroy');
 
 Route::get('/admin/reservation/liste', [VoyageController::class,'index'])->name('voyage.liste');
-
 Route::get('/admin/envoi/liste', [EnvoiController::class,'index'])->name('envoi.liste');
-
 Route::get('/admin/location/liste', [LocationController::class,'index'])->name('locations.liste');
 
 Route::get('/admin/planning/liste', [PlanningsController::class,'index'])->name('planning.liste');

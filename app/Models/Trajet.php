@@ -15,6 +15,7 @@ class Trajet extends Model
         'Prix',
         'Date', 
         'Heure', 
+        'lignes_id',
     ];
 
     public function lignes(): BelongsTo
